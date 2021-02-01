@@ -1,13 +1,13 @@
 import './App.css';
 import React from 'react'
-import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
+import { HashRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 import Menu from "./Páginas/menu"
 import Perguntas from "./Páginas/perguntas"
 
 class App extends React.Component {
  render() {
    return( 
-   <Router basename={process.env.PUBLIC_URL}>
+   <Router>
       <Switch>
           <Route exact path="/">
             <Redirect to="/menu" />

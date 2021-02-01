@@ -20,7 +20,7 @@ class RenderBlocks extends React.Component {
                     let nome = element2[1].nome
                     let gif = element2[1].gif
                     return (
-
+                        <div className= "blockOuterDiv">
                         <div className ="blockInnerDiv" onClick={() => this.setState({ redirect: "/perguntas", materiaP: this.props.filtrar, temaP: element2[0] })}>
                         <div className="block">
                             <div className="blockGif">{ gif !== undefined ? <img className="blockGifImg" alt="gif" src={gif}></img> : <div className="rect">IMAGEM INDISPONÍVEL</div>}</div>
@@ -30,6 +30,7 @@ class RenderBlocks extends React.Component {
                             <div className="blockName">{nome}</div> 
                             <div className="blockMateria">{materia}</div>
                             </div>
+                        </div>
                         </div>
                         </div>
                     )
