@@ -349,12 +349,36 @@ let Dados = {
                 id: 1,
                 gif: "https://classicalwisdom.com/wp-content/uploads/2015/09/Plato-and-Aristotle-gif.gif",
                 perguntas: [{
+                    topico: "",
+                    perguntas: [{
+                        pergunta: "O que era o Movimento Sofista?",
+                        resposta: '"Mestres da retórica considerados “sábios”, “detentores do conhecimento” → Para eles, a verdade seria algo relativo, cabendo a cada um convencer que sua verdade é a correta."',
+                    }, {
+                        pergunta: "O que era o Sofisma?",
+                        resposta: "Enunciado aparentemente verdadeiro, mas de conteúdo falso/duvidoso"
+                    }, ]
+                },{
                     topico: "Sócrates",
                     perguntas: [{
                         pergunta: "Qual a frase famosa de Sócrates?",
                         resposta: '"Só sei que nada sei"',
                         imagemPergunta: "https://vegazeta.com.br/wp-content/uploads/2018/09/QUEM-FOI-S%C3%93CRATES-1200x681.png",
-                    }, ]
+                    }, {
+                        pergunta: "Qual o contexto específico da teoria socrática?",
+                        resposta: "Século V a.c. (“de Péricles”/ “de Ouro”) → Auge da democracia ateniense, muito tempo para o ócio criativo."
+                    },{
+                        pergunta: "Como encontra-se a teoria de Sócrates?",
+                        resposta: "Propagou seus conhecimento apenas oralmente, mas seus diálogos são registrados por Platão"
+                    },{
+                        pergunta: "Qual foi a revolução filosófica provocada?",
+                        resposta: "Reverter o tema de Cosmogonia para a Verdade (racionalista)"
+                    },{
+                        pergunta: "Qual o método socrático?",
+                        resposta: `- Reconhecimento da ignorância (“só sei que nada sei”), <br>
+                        - <span class="bold">Maiêutica:</span> ''parir'' o conhecimento pela dialética socrática <br>
+                        
+                                ↳ OBS: composto por exortação (estímulo), indagação, ironia (falsa ignorância), aporia (contradição), racionalidade (lógica)`
+                    },]
                 }, ]
             }
         }

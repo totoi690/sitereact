@@ -11,10 +11,12 @@ class Forms extends React.Component {
     handleChangeTema(e) {
         this.props.handler("selectTema", e.target.value)
         this.props.handler("selectMateria", this.props.selectMateria)
+        this.props.handler("animatecards", !this.props.ca)
       }
       handleChangeMateria(e) {
         this.props.handler("selectTema", Object.keys(Dados[e.target.value].temas)[0])
         this.props.handler("selectMateria", e.target.value)
+        this.props.handler("animatecards", !this.props.ca)
       }
 
 
