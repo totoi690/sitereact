@@ -34,7 +34,7 @@ class RenderTopico extends React.Component {
     render() {
         return (
             this.props.element.perguntas.map((element1) => {
-                return(<>
+                return(
                     <Card 
                         handler={this.onUpdateItem} 
                         tema={this.props.tema.perguntas[this.props.index]} 
@@ -45,7 +45,7 @@ class RenderTopico extends React.Component {
                         index={this.props.tema.perguntas[this.props.index].perguntas.indexOf(element1)}
                         topico={element1.topico}
                     />
-                    </>)})
+                    )})
         )
     }
 }

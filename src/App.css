@@ -20,6 +20,13 @@ body {
     font-family: 'Nunito Sans', sans-serif;
     font-weight: 300;
     background-color: var(--color4);
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; 
 }
 
 .flashcards {
@@ -69,11 +76,14 @@ h1 {
     margin-top: calc(-1.6vw + 3px);
     color: white;
     text-shadow: .1vw .1vw .075vw var(--color3) ,calc(.12vw + 3px) calc(.12vw + 3px) .05vw var(--color7);
-
 }
 
 h1:hover {
   cursor: pointer;
+  color: var(--color7);
+  font-size: calc(2.4vw + 25px);
+  text-shadow: .1vw .1vw .075vw var(--color8) ,calc(.12vw + 3px) calc(.12vw + 3px) .05vw var(--color9);
+  transition: all 150ms ease-in-out;
 }
 
 h2 {
@@ -163,11 +173,11 @@ button {
     background-color: var(--color6);
     border: 2px solid var(--color6);
     color: var(--color1);
-    padding: calc(0.2vw + 10px) calc(.25vw + 12px);
+    padding: calc(.4vw + 4px) calc(.6vw + 5px);
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: calc(0.25vw + 12px);
+    font-size: calc(.75vw + 5px);
     border-radius: calc(.3vw + 5px);
     margin-left: calc(.1vw + 2px);
     margin-right: calc(.1vw + 2px);
@@ -210,7 +220,6 @@ button:hover {
     background-color: var(--color9);
     cursor: pointer;
   }
-
 
   .cardDiv {
     background-color: var(--color9);
@@ -314,6 +323,23 @@ button:hover {
   text-shadow: .15vw .15vw .01vw var(--color1);
   background: linear-gradient(to top, var(--color5) 23%, transparent 23%);
   -webkit-text-stroke: .5px var(--color8);
+  cursor: pointer;
+
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Old versions of Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none; 
+}
+
+.topico:hover {
+  color: var(--color1); 
+  font-size: calc(1.7vw + 25px);
+  text-shadow: .15vw .15vw .01vw var(--color7);
+  background: linear-gradient(to top, var(--color5) 23%, transparent 23%);
+  -webkit-text-stroke: 1px var(--color8);
+  transition: all 150ms ease-in-out;
 }
 
 .bold {
@@ -338,36 +364,6 @@ button:hover {
   max-height: calc(16vw + 50px);
 }
 
-.faderl-appear {
-  transform: translateX(100%);
-}
-
-.faderl-appear.faderl-appear-active {
-  transform: translateX(0%);
-  transition: transform 500ms ease-in-out;
-}
-
-.faderl-exit {
-  transform: translateX(0%);
-}
-
-.faderl-exit.faderl-exit-active {
-  transform: translateX(-100%);
-  transition: transform 500ms ease-in-out;
-}
-
-.faderl-exit-done {
-  transform: translateX(-100%);
-}
-
-.faderl-enter {
-  transform: translateX(100%);
-}
-
-.faderl-enter.faderl-enter-active {
-  transform: translateX(0%);
-  transition: transform 500ms ease-in-out;
-}
 
 
 @keyframes trocarcartao {
@@ -377,12 +373,12 @@ button:hover {
 }
 
 .cartao-appear {
-  transform: translateX(100%);
+  opacity: 0;
 }
 
 .cartao-appear.cartao-appear-active {
-  transform: translateX(0%);
-  transition: transform 700ms ease-in-out;
+  opacity: 1;
+  transition: opacity 700ms ease-in-out;
 }
 
 .cartao-exit {
@@ -408,6 +404,10 @@ button:hover {
 .cartao-enter-done {
   transform: translateX(0%);
 }
+
+
+
+
 
 
 
@@ -442,3 +442,15 @@ button:hover {
   transition: opacity 500ms ease-in-out;
 }
 
+
+
+.topico-appear, .topico-enter{
+  opacity: 0;
+  transform: scale(.1);
+}
+
+.topico-appear.topico-appear-active, .topico-enter.topico-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 600ms, transform 250ms ease-in-out;
+}

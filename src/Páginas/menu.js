@@ -11,7 +11,7 @@ class Menu extends React.Component {
     constructor() {
         super()
         this.handler = this.handler.bind(this)
-        this.state = { filtrar: "todos", animate: true}
+        this.state = { filtrar: "todos", animate: true , fanimate: true}
     }
 
     handler(prop1, prop2) {
@@ -21,7 +21,7 @@ class Menu extends React.Component {
     render() {
         return (
         <div className="principal">
-        <Header page={"menu"}/>
+        <Header page={"menu"} handler={this.handler}/>
 
         <div className="justcolor">
         <CSSTransition
@@ -30,7 +30,7 @@ class Menu extends React.Component {
                  timeout={500}
                  classNames={"fade"}>
         <div className="intro">
-            <Filtrar handler={this.handler}/>
+            <Filtrar handler={this.handler} fn={this.state.fanimate}/>
             <hr></hr> 
         </div>
         </CSSTransition>
@@ -38,10 +38,10 @@ class Menu extends React.Component {
 
         <div className="justcolor">
             <CSSTransition
-              in={this.state.animate}
+              in={this.state.fanimate === true}
               appear={true}
-               timeout={500}
-               classNames={"fadelr"}>
+               timeout={700}
+               classNames={"blocks"}>
             <div className="blockDiv">
                 <RenderBlocks filtrar={this.state.filtrar}/>
             </div>

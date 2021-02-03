@@ -16,8 +16,8 @@ render() {
 
     const titulo = "FLASHCARDS"
 
-    return (<div className="header">
-    <span><h1 onClick={() => {this.setState({ redirect: "/menu" })}}>{titulo} <img alt="flashcards" className="flashcards" src={Flashcard}></img></h1></span>
+    return (<div className="header, tooltip">
+    <span title="Ir para o menu"><h1 onClick={() => {this.setState({ redirect: "/menu" })}}>{titulo} <img alt="flashcards" className="flashcards" src={Flashcard}></img></h1></span>
     </div>)
 }
 }

@@ -1,16 +1,25 @@
 import React from 'react'
 import RenderTopico from "../Funções/renderTopico"
+import { CSSTransition } from "react-transition-group"
+import "../App.css"
 
 class RenderCards extends React.Component {
     constructor() {
         super()
-        this.state = {paraFrente: [], temaAtual: ""}
+        this.state = {paraFrente: [], temaAtual: "", card: []}
         this.onUpdateItem = this.onUpdateItem.bind(this)
+        this.mudarstat = this.mudarstat.bind(this)
     }
 
       componentDidMount() {
         let newArray = Array(this.props.tema.perguntas.length).fill(true)
         this.setState({paraFrente: newArray, temaAtual: this.props.tema.nome})
+
+        let cardState = []
+        this.props.tema.perguntas.map(() => {
+            return(cardState.push(false))
+        })
+        this.setState({ card: cardState })
       }
 
       onUpdateItem = (index, valor) => { 
@@ -31,17 +40,50 @@ class RenderCards extends React.Component {
         this.props.handler("paraFrente", this.state.paraFrente)
       };
 
+      mudarstat = (i) => {
+        let itemsInit = this.state.card[i]
+        let items = this.state.card.map(() => {
+            return(false)
+        });
+        
+        if ( itemsInit === true ) {
+            items[i] = false
+        } else {
+            items[i] = true
+        }
+
+        this.setState({card: items});
+      }
+
+
     render() {
         if (this.props.tema.perguntas !== undefined) {
-
-            return(          
+            return( 
                 this.props.tema.perguntas.map((element, index) => {
                 return(
                     <>
+                    {element.topico !== undefined ? 
+                    <div className="topico" onClick={() => { this.mudarstat(index) }}> {element.topico} </div> 
+                    : null}
                     
-                    {element.topico !== undefined ? <div className="topico"> {element.topico} </div> : null}
+                    {this.state.card[index] === true && element.topico !== undefined ?    
+                        <CSSTransition
+                        in={this.state.card[index] === true}
+                        appear={true}
+                        timeout={600}
+                        classNames={"topico"}>                         
                     <div className="envolta">
-                    <RenderTopico element={element} index={index} tema={this.props.tema} handler={this.props.handler}/> </div>
+                    <RenderTopico element={element} index={index} tema={this.props.tema} handler={this.props.handler}/>
+                    </div> 
+                        </CSSTransition>
+                    : null}
+                    
+                    { element.topico === undefined || element.topico === "" ?                     
+                    <div className="envolta">
+                        <RenderTopico element={element} index={index} tema={this.props.tema} handler={this.props.handler}/>
+                    </div> 
+                    : null}
+
                     <hr></hr>
                     </>
                 )  

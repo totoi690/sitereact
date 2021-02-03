@@ -89,7 +89,22 @@
     height: .075em;
     background: var(--color4);
   }
-
+  
+  .blocks-appear.blocks-appear-active, .blocks-exit.blocks-exit-active, .blocks-enter.blocks-enter-active{
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 600ms, transform 250ms ease-in-out;
+  }
+  
+  .blocks-enter, .blocks-appear, .blocks-exit {
+    opacity: 0;
+    transform: scale(.1);
+  }
+  
+  .blocks-enter-done, .blocks-appear-done, .blocks-exit-done{
+    opacity: 1;
+    transform: scale(1);
+  }
 
 
   .fadelr-appear {

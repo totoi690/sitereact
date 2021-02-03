@@ -11,6 +11,7 @@ class Filtrar extends React.Component {
     handleChangeMateria(e) {
         let materia = e.target.value
         this.props.handler("filtrar", materia)
+        this.props.handler("fanimate", !this.props.fn)
       }
 
     render() {
