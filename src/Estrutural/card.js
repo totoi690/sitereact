@@ -17,6 +17,8 @@ class Card extends React.Component {
             }
         }
 
+        let newDate = () => {return new Date()}
+
         let pontos = this.props.tema.perguntas[this.props.index].pontos
         let corselecionada = () => {
             if (this.props.tema.perguntas[this.props.index].cor === undefined) { 
@@ -28,7 +30,7 @@ class Card extends React.Component {
             this.setState({
                 cor: mudarCor(pontos)
             })
-            calcularPontuacao(pontos, this.props.index, this.props.tema, mudarCor(pontos)); 
+            calcularPontuacao(pontos, this.props.index, this.props.tema, mudarCor(pontos), newDate()); 
         }
 
         let arePoints = false
@@ -39,12 +41,13 @@ class Card extends React.Component {
         return (
         <>
         {this.props.pergunta !== undefined ?
-        <div className={this.state.fade ? 'card' : 'card-animated'} style={arePoints ? {backgroundColor: "#" + corselecionada()} : null} onClick={() => {this.setState(prevState => {this.props.handler(this.props.index, !prevState.frente); return {frente: !prevState.frente, fade: !prevState.fade}})}}>
+        <div className={this.state.fade ? 'card' : 'card-animated'} style={arePoints ? {backgroundColor: "#" + corselecionada()} : null} onClick={() => {this.setState(prevState => {return {frente: !prevState.frente, fade: !prevState.fade}})}}>
             {this.state.frente ?
                 <>
                 <div className="pointcontainer, isFlipped">
                     <span className="check">{pontos !== 0 && pontos !== undefined ? "✅" : null}</span>
                     <span className="pontos">{pontos}</span>
+
                 </div>
 
                 <div className="isFlipped">

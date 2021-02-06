@@ -8,7 +8,9 @@ import Total from "../Estrutural/total"
 import Salvar from "../Funções/salvar"
 import ScrollButton from "../Estrutural/scrollbutton"
 import "../App.css"
+import "../Páginas/perguntas.css"
 import { CSSTransition } from "react-transition-group"
+import Navegation from "../Estrutural/navegation"
 
 class Perguntas extends React.Component {
     constructor() {
@@ -51,6 +53,7 @@ class Perguntas extends React.Component {
 
           <div className="App" onClick={() => this.setState({windowScroll: window.scrollY})}>
             <Header/>
+            <Navegation/>
 
             <div className="justcolor">
             <CSSTransition
@@ -62,6 +65,8 @@ class Perguntas extends React.Component {
             </CSSTransition>
             </div>
 
+
+            <div className="totalDiv">
             <div className="justcolor1">
             <CSSTransition
                 in={this.state.animate}
@@ -70,6 +75,7 @@ class Perguntas extends React.Component {
                  classNames={"fade"}>
             <Total tema={materia} materia={Dados[this.state.selectMateria]} selecttema={this.state.selectTema} selectmateria={this.state.selectMateria}/>
             </CSSTransition>
+            </div>
             </div>
 
             <div className="justcolor">

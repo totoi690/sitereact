@@ -355,7 +355,8 @@ let Dados = {
                         resposta: '"Mestres da retórica considerados “sábios”, “detentores do conhecimento” → Para eles, a verdade seria algo relativo, cabendo a cada um convencer que sua verdade é a correta."',
                     }, {
                         pergunta: "O que era o Sofisma?",
-                        resposta: "Enunciado aparentemente verdadeiro, mas de conteúdo falso/duvidoso"
+                        resposta: "Enunciado aparentemente verdadeiro, mas de conteúdo falso/duvidoso",
+
                     }, ]
                 },{
                     topico: "Sócrates",
@@ -363,6 +364,7 @@ let Dados = {
                         pergunta: "Qual a frase famosa de Sócrates?",
                         resposta: '"Só sei que nada sei"',
                         imagemPergunta: "https://vegazeta.com.br/wp-content/uploads/2018/09/QUEM-FOI-S%C3%93CRATES-1200x681.png",
+
                     }, {
                         pergunta: "Qual o contexto específico da teoria socrática?",
                         resposta: "Século V a.c. (“de Péricles”/ “de Ouro”) → Auge da democracia ateniense, muito tempo para o ócio criativo."
@@ -470,6 +472,45 @@ let Dados = {
                             resposta: "U2 estadunidense sobrevoa Cuba e descobre bases militares soviéticas (uma grande ameaça aos EUA, e o mais próximo que chegamos da 3ª G.M.) "
                         }
                     ]}]
+            },
+            revolucaoindustrial: {
+                nome: "Revolução Industrial",
+                id:3,
+                gif: "https://media.giphy.com/media/Tj4xrJS9l1FV2ezfVc/giphy.gif",
+                perguntas: [{
+                    topico: "Contexto e pioneirismo",
+                    perguntas: [{
+                        pergunta: "Qual o contexto da revolução industrial?",
+                        resposta: "Passagem do capitalismo comercial para o industrial"
+                    }, {
+                        pergunta: "Quais as razões para o pioneirismo inglês?",
+                        resposta: "- Burguesia forte após a Revolução Gloriosa <br> - “Cercamentos” liberaram mão-de-obra e matéria-prima <br> - Acúmulo de capital"
+                    }, {
+                        pergunta: "Por que houve o acúmulo de capital?",
+                        resposta: "Tratado de Methuen e comércio marítimo"
+                    }]
+                }, {
+                    topico: "Características e consequências",
+                    perguntas: [{
+                        pergunta: "Qual era o mercado consumidor?",
+                        resposta: "Colônias inglesas e Europa"
+                    }, {
+                        pergunta: "Quais as principais características?",
+                        resposta: "Começo na Inglaterra (déspotas esclarecidos de outros países tomam iniciativas de fomento à manufatura para competição)",
+                    }, {
+                        pergunta: "Quais foram as consequências?",
+                        resposta: "Surgimento do proletariado urbano"
+                    }]
+                }, {
+                    topico: "Movimentos sociais",
+                    perguntas: [{
+                        pergunta: "Quais foram os <span class='bold'>três</span> tipos de movimentos sociais mais comuns na época?",
+                        resposta: `
+                        - <span class='bold'>Trade Unions:</span> prestavam assistência aos trabalhadores (sindicatos) <br>
+                        - <span class='bold'>Ludismo:</span> destruição das maquinas <br>
+                        - <span class='bold'>Cartismo:</span> reunião de assinaturas na “Carta do Povo” e entrega ao parlamento inglês, exigindo voto secreto e universal`
+                    }]
+                }]
             }
         }
     },

@@ -29,43 +29,6 @@ body {
             user-select: none; 
 }
 
-.flashcards {
-    width: calc(3.7vw + 25px);
-    transform: translateY(calc(1vw + 5px)) translateX(calc(-1vw + 5px));
-    
-}
-
-.justcolor {
-  background-color: var(--color9);
-  margin-left: -.44vw;
-  margin-right: -.44vw;
-}
-
-.justcolor1 {
-  background-color: var(--color6);
-  margin-left: -.44vw;
-  margin-right: -.44vw;
-}
-
-.justcolor2 {
-  background-color: var(--color4);
-  margin-left: -.44vw;
-  margin-right: -.44vw;
-}
-
-.totalDiv {
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
-  top: 0vw;
-  left: 0vw;
-  right: 0vw;
-  padding: 1vw;
-  background-color: var(--color6);
-  color: var(--color1);
-  z-index: 1;
-  margin-left: -.44vw;
-  margin-right: -.44vw;
-}
 
 h1 {
   font-family: 'Josefin Sans', sans-serif;
@@ -95,7 +58,6 @@ h2 {
     color: var(--color1);
 }
 
-.per{font-family: 'Nunito Sans', sans-serif; font-weight:700; font-style: italic; color: var(--color4); }
 
 .forms{
   display:flex;
@@ -148,7 +110,7 @@ select option {
   background-color: var(--color1);
 }
 
-.res {display: flex; flex-direction: column; }
+
 
 .header {
   background-color: var(--color4);
@@ -193,91 +155,6 @@ button:hover {
   }
   
 
-.card {
-    display: block;
-    margin-left: var(--cardMargin);
-    margin-right: var(--cardMargin);
-    margin-bottom: calc(1vw + 12px);
-    border: 2px solid black;
-    transition: transform 0.5s, background-color .4s;
-    transform-style: preserve-3d;
-    padding-left: 1vw; padding-right: 1vw;
-    background-color: var(--color9);
-    cursor: pointer;
-  }
-
-  .card-animated {
-    display: block;
-    margin-left: var(--cardMargin);
-    margin-right: var(--cardMargin);
-    margin-bottom: calc(1vw + 12px);
-    border: 2px solid black;
-    transition: transform 0.5s, background-color .4s;
-    animation-iteration-count: 1;
-    transform-style: preserve-3d;
-    transform: rotateY(180deg);
-    padding-left: 1vw; padding-right: 1vw;
-    background-color: var(--color9);
-    cursor: pointer;
-  }
-
-  .cardDiv {
-    background-color: var(--color9);
-    padding: .5vw;
-    margin-left: -.44vw;
-    margin-right: -.44vw;
-  }
-
-  @keyframes example {
-    33%  {box-shadow: .12em .12em var(--color4);}
-    66%  {box-shadow: .12em .12em var(--color4), .24em .24em var(--color5);}
-    100% {box-shadow: .12em .12em var(--color4), .24em .24em var(--color5), .36em .36em var(--color6);}
-  }
-  @keyframes example1 {
-    33%  {box-shadow:-.12em .12em var(--color4);}
-    66%  {box-shadow:-.12em .12em var(--color4), -.24em .24em var(--color5);}
-    100% {box-shadow:-.12em .12em var(--color4), -.24em .24em var(--color5), -.36em .36em var(--color6);}
-  }
-
-  .card:hover {
-    animation-timing-function: ease-in-out;
-      animation-name: example;
-      animation-duration: 0.3s;
-      animation-fill-mode: forwards;
-}
-
-.card-animated:hover {
-    animation-timing-function: ease-in-out;
-    animation-name: example1;
-    animation-duration: 0.3s;
-    animation-fill-mode: forwards;
-}
-  
-  .isFlipped {
-    transform: rotateY(180deg);
-    padding-left: 3vw; padding-right: 3vw;
-  }
-
-.pontos {
-    position: absolute;
-    top: .4vw;
-    right: 0vw;
-    font-size: 70%; 
-    height: 70%;
-    font-weight: bold;
-    font-style: italic;
-}
-
-.check {
-  position: absolute;
-  top: .45vw;
-  left: -.2vw;
-  font-size: 70%; 
-  height: 70%;
-}
-
-.pointcontainer {position: relative }
-
 .scrollButtonDiv {
   position: fixed;
   bottom: calc(.8vw + 15px);
@@ -305,43 +182,6 @@ button:hover {
   padding: 0;
 }
 
-.imagemResposta, .imagemPergunta {
-  border: .125vw solid var(--color4);
-  max-width: calc(15vw + 170px);
-  max-height: calc(15vw + 100px);
-}
-
-.topico{
-  margin-left: var(--cardMargin);
-  margin-right: var(--cardMargin);
-  margin-top: calc(.5vw + 7px);
-  margin-bottom: calc(.4vw + 5px);
-  border: 0;
-  font-family: 'Lobster', cursive;
-  color: var(--color7); 
-  font-size: calc(1.5vw + 20px);
-  text-shadow: .15vw .15vw .01vw var(--color1);
-  background: linear-gradient(to top, var(--color5) 23%, transparent 23%);
-  -webkit-text-stroke: .5px var(--color8);
-  cursor: pointer;
-
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Safari */
-   -khtml-user-select: none; /* Konqueror HTML */
-     -moz-user-select: none; /* Old versions of Firefox */
-      -ms-user-select: none; /* Internet Explorer/Edge */
-          user-select: none; 
-}
-
-.topico:hover {
-  color: var(--color1); 
-  font-size: calc(1.7vw + 25px);
-  text-shadow: .15vw .15vw .01vw var(--color7);
-  background: linear-gradient(to top, var(--color5) 23%, transparent 23%);
-  -webkit-text-stroke: 1px var(--color8);
-  transition: all 150ms ease-in-out;
-}
-
 .bold {
   font-family: 'Nunito Sans', sans-serif;
   font-weight: 500;
@@ -364,52 +204,40 @@ button:hover {
   max-height: calc(16vw + 50px);
 }
 
-
-
-@keyframes trocarcartao {
-  50%  {transform: translateX(-100%);}
-  50%  {transform: translateX(100%);}
-  100% {transform: translateX(0%);}
+.cardDiv {
+  background-color: var(--color9);
+  padding: .5vw;
+  margin-left: -.44vw;
+  margin-right: -.44vw;
 }
 
-.cartao-appear {
-  opacity: 0;
+.navigationDiv {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: var(--color6);
+  color: var(--color2);
+  padding: .3em;
+  margin-left: -.44vw;
+  margin-right: -.44vw;
 }
 
-.cartao-appear.cartao-appear-active {
-  opacity: 1;
-  transition: opacity 700ms ease-in-out;
+.link {
+  color: white;
 }
 
-.cartao-exit {
-  transform: translateX(0%);
+.navigationLink {
+  display: inline-block;
+  text-decoration: none;
+  background-image: linear-gradient(var(--color9), var(--color9)), linear-gradient(var(--color6), var(--color6));
+  background-size: 0 2px, auto;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  transition: all .2s ease-out;
 }
 
-.cartao-exit.cartao-exit-active {
-  animation: trocarcartao 700ms
+.navigationLink:hover {
+  background-size: calc(100%) 2px, auto;
 }
-
-.cartao-exit-done {
-  transform: translateX(0%);
-}
-
-.cartao-enter {
-  transform: translateX(0%);
-}
-
-.cartao-enter.cartao-enter-active {
-  animation: trocarcartao 700ms
-}
-
-.cartao-enter-done {
-  transform: translateX(0%);
-}
-
-
-
-
-
-
 
 .fade-appear {
   opacity: 0;
@@ -440,17 +268,4 @@ button:hover {
 .fade-enter.fade-enter-active {
   opacity: 0;
   transition: opacity 500ms ease-in-out;
-}
-
-
-
-.topico-appear, .topico-enter{
-  opacity: 0;
-  transform: scale(.1);
-}
-
-.topico-appear.topico-appear-active, .topico-enter.topico-enter-active {
-  opacity: 1;
-  transform: scale(1);
-  transition: opacity 600ms, transform 250ms ease-in-out;
 }

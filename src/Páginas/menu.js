@@ -6,6 +6,7 @@ import RenderBlocks from "../Funções/renderBlocks"
 import Footer from "../Estrutural/footer"
 import Filtrar from "../Estrutural/filtrar"
 import { CSSTransition } from "react-transition-group"
+import Navegation from "../Estrutural/navegation"
 
 class Menu extends React.Component {
     constructor() {
@@ -22,6 +23,7 @@ class Menu extends React.Component {
         return (
         <div className="principal">
         <Header page={"menu"} handler={this.handler}/>
+        <Navegation />
 
         <div className="justcolor">
         <CSSTransition

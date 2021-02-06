@@ -41,6 +41,7 @@ class RenderCards extends React.Component {
       };
 
       mudarstat = (i) => {
+          
         let itemsInit = this.state.card[i]
         let items = this.state.card.map(() => {
             return(false)
@@ -50,7 +51,8 @@ class RenderCards extends React.Component {
             items[i] = false
         } else {
             items[i] = true
-        }
+
+    }
 
         this.setState({card: items});
       }
