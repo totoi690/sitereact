@@ -1,24 +1,28 @@
 {
   "files": {
-    "main.css": "/sitereact/static/css/main.f38b13de.chunk.css",
-    "main.js": "/sitereact/static/js/main.de7bfea6.chunk.js",
-    "main.js.map": "/sitereact/static/js/main.de7bfea6.chunk.js.map",
-    "runtime-main.js": "/sitereact/static/js/runtime-main.825f87da.js",
-    "runtime-main.js.map": "/sitereact/static/js/runtime-main.825f87da.js.map",
-    "static/js/2.456cdb86.chunk.js": "/sitereact/static/js/2.456cdb86.chunk.js",
-    "static/js/2.456cdb86.chunk.js.map": "/sitereact/static/js/2.456cdb86.chunk.js.map",
-    "static/js/3.5a95aae0.chunk.js": "/sitereact/static/js/3.5a95aae0.chunk.js",
-    "static/js/3.5a95aae0.chunk.js.map": "/sitereact/static/js/3.5a95aae0.chunk.js.map",
+    "main.css": "/sitereact/static/css/main.090f95ff.chunk.css",
+    "main.js": "/sitereact/static/js/main.95772d2f.chunk.js",
+    "main.js.map": "/sitereact/static/js/main.95772d2f.chunk.js.map",
+    "runtime-main.js": "/sitereact/static/js/runtime-main.b5a66255.js",
+    "runtime-main.js.map": "/sitereact/static/js/runtime-main.b5a66255.js.map",
+    "static/css/2.26f6bc31.chunk.css": "/sitereact/static/css/2.26f6bc31.chunk.css",
+    "static/js/2.5f84245b.chunk.js": "/sitereact/static/js/2.5f84245b.chunk.js",
+    "static/js/2.5f84245b.chunk.js.map": "/sitereact/static/js/2.5f84245b.chunk.js.map",
+    "static/js/3.2d94ea5b.chunk.js": "/sitereact/static/js/3.2d94ea5b.chunk.js",
+    "static/js/3.2d94ea5b.chunk.js.map": "/sitereact/static/js/3.2d94ea5b.chunk.js.map",
     "index.html": "/sitereact/index.html",
-    "static/css/main.f38b13de.chunk.css.map": "/sitereact/static/css/main.f38b13de.chunk.css.map",
-    "static/js/2.456cdb86.chunk.js.LICENSE.txt": "/sitereact/static/js/2.456cdb86.chunk.js.LICENSE.txt",
+    "static/css/2.26f6bc31.chunk.css.map": "/sitereact/static/css/2.26f6bc31.chunk.css.map",
+    "static/css/main.090f95ff.chunk.css.map": "/sitereact/static/css/main.090f95ff.chunk.css.map",
+    "static/js/2.5f84245b.chunk.js.LICENSE.txt": "/sitereact/static/js/2.5f84245b.chunk.js.LICENSE.txt",
+    "static/media/katex.min.css": "/sitereact/static/media/KaTeX_Typewriter-Regular.c5441b17.ttf",
     "static/media/scrolltop.0426d3b5.png": "/sitereact/static/media/scrolltop.0426d3b5.png",
     "static/media/scrolltopblue.2a7b7920.png": "/sitereact/static/media/scrolltopblue.2a7b7920.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.825f87da.js",
-    "static/js/2.456cdb86.chunk.js",
-    "static/css/main.f38b13de.chunk.css",
-    "static/js/main.de7bfea6.chunk.js"
+    "static/js/runtime-main.b5a66255.js",
+    "static/css/2.26f6bc31.chunk.css",
+    "static/js/2.5f84245b.chunk.js",
+    "static/css/main.090f95ff.chunk.css",
+    "static/js/main.95772d2f.chunk.js"
   ]
 }
