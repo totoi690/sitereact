@@ -31,7 +31,7 @@ class Perguntas extends React.Component {
           this.setState({selectMateria: this.props.location.state.materiaP, selectTema: this.props.location.state.temaP});
         }} else {
           let maxlenghtMateria = Object.entries(Dados).length
-          let randomMateria = Math.floor(Math.random() * Number(maxlenghtMateria + 1))
+          let randomMateria = Math.floor(Math.random() * Number(maxlenghtMateria))
           let materia = Object.entries(Dados)[randomMateria][0]
           let maxlenghtTema = Object.entries(Dados[materia].temas).length
           let randomTema = Math.floor(Math.random() * Number(maxlenghtTema-1))

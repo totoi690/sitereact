@@ -44,6 +44,8 @@ class RenderTopico extends React.Component {
                         imagemPergunta={element1.imagemPergunta}  
                         index={this.props.tema.perguntas[this.props.index].perguntas.indexOf(element1)}
                         topico={element1.topico}
+                        nestedQuestions={element1.nestedQuestions}
+                        math={element1.math}
                     />
                     )})
         )

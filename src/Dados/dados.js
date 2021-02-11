@@ -123,7 +123,7 @@ let Dados = {
                         },
                         {
                             pergunta: "<span class='bold'>EXERCÍCIO:</span> Com as fitas de DNA a seguir, identifique quem é mais provável de ser o filho biológico dos pais",
-                            imagemPergunta: "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f311b7ef-47b1-4ac3-9506-630deb658945/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210129%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210129T191347Z&X-Amz-Expires=86400&X-Amz-Signature=e51e714eb0ee8a73cdbf577e90bdea7fcd8eff5a5bb714033f5d936473d9f7b4&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22",
+                            imagemPergunta: "https://d2q576s0wzfxtl.cloudfront.net/2018/04/10151033/130.png",
                             resposta: `O filho é o indivíduo III`
                         }
                     ]
@@ -211,12 +211,78 @@ let Dados = {
                     topico: "Gravidade",
                     perguntas: [{
                         pergunta: "O que é a gravidade?",
-                        resposta: "Sei lá, responde aí Newton",
+                        resposta: "Do ponto de vista da Mecânica, a gravidade é a força de atração que surge entre dois corpos simplesmente pela presença deles em um ponto do espaço.",
                         imagemPergunta: "https://i.makeagif.com/media/6-30-2015/2pZiZJ.gif"
                     }, {
-                        pergunta: "Pergunta 02?",
-                        resposta: "Sei lá, responde aí Newton",
-                        imagemPergunta: "https://i.makeagif.com/media/6-30-2015/2pZiZJ.gif"
+                        pergunta: "Quem descobriu a gravidade?",
+                        resposta: "Isaac Newton",
+                        imagemResposta: "https://media0.giphy.com/media/l1J9z5SmyhtdybtaU/giphy.gif",
+                        nestedQuestions: [{
+                            pergunta: "Em que ano se deu essa descoberta?",
+                            resposta: "No ano de 1666",
+                            imagemResposta: "http://1.bp.blogspot.com/-430QWGvpRAs/TZ5627ufXyI/AAAAAAAAAYc/HEcv9lQCJzc/s1600/isaac-newton-on-twitter-and-facebook.jpg"
+                        }]
+                    }]
+                }],
+            },
+            hidrostatica: {
+                nome: "Hidrostática",
+                id: 2,
+                gif: "https://media1.tenor.com/images/df999159eb1a51042ce94135901b78e7/tenor.gif?itemid=8611981",
+                perguntas: [{
+                    topico: "Densidade e pressão",
+                    perguntas: [{
+                        pergunta: "Como calcula-se a densidade de um corpo?",
+                        math: "Densidade = \\frac {Massa} {Volume}",
+                    },
+                    {
+                        pergunta: "Como calcula-se a pressão de uma força?",
+                        math: "Pressão = \\frac {Força} {Área}",
+                        nestedQuestions: [{
+                            pergunta: "Qual a unidade no SI? Quanto mede 1 atm nesse unidade?",
+                            resposta: "Pascal",
+                            math: "1 atm = 10^5 Pa"
+                        }]
+                    }]
+                }, {
+                    topico: "Pressão hidrostática",
+                    perguntas: [{
+                        pergunta: "O que diz o <span class='bold'>Teorema de Stevin</span>?",
+                        resposta: "Pontos do mesmo líquido a uma mesma profundidade terão uma mesma pressão",
+                        nestedQuestions: [{
+                            pergunta: "Qual dos vasos abaixo tem a maior pressão de fundo?",
+                            resposta: "Todos tem a mesma pressão, desde que a altura do líquido seja igual",
+                            imagemPergunta: "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/903d903c-462d-49bd-9f7a-17c7551449e8/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210211%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210211T214626Z&X-Amz-Expires=86400&X-Amz-Signature=069443bbe972a40da8f75c9c64f255c36cd825ea64e9e75ae67302c7f84302c4&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22"
+                        }, {
+                            pergunta: "Qual a fórmula?",
+                            math: '\\boxed{P_{líq} = \\mu_{liq}. g. H}'
+                        }]
+                    }, {
+                        pergunta: "Como funcionam os vasos comunicantes?",
+                        imagemPergunta: "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/4c3f4246-b0b9-45bc-9e57-5e89da14e72d/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210211%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210211T220815Z&X-Amz-Expires=86400&X-Amz-Signature=5b4724df1006ad15d2aa37b5bde20e40915263d3cce73929a720b87eebdb77af&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22",
+                        resposta: "Pontos em uma mesma altura possuem a mesma pressão:",
+                        math: "P_A=P_B \\;\\rightarrow \\; P_{atm} + \\mu_2.g.h_2 = P_{atm} + \\mu_1.g.h_1 \\;\\rightarrow \\; \\frac {\\mu_1} {\\mu_2} = \\frac {h_2} {h_1}"
+                    }, {
+                        pergunta: "O que diz o Princípio de pascal? - prensa hidráulica",
+                        resposta: "Um acréscimo de pressão feito em um ponto do líquido é transmitido integralmente a todos os pontos do líquido",
+                        nestedQuestions: [{
+                            pergunta: "Qual a relação entre as áreas 1 e 2 e as forças 1 e 2?",
+                            imagemPergunta: "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/7a33766d-6534-49da-ad22-70ab434212fb/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210211%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210211T221034Z&X-Amz-Expires=86400&X-Amz-Signature=afb7d17ab718d6bdb59ad879200314efd2ea3ab0fac0e1069c9c6041e38bc991&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22",
+                            math: "\\boxed{\\frac {F_1} {A_1} = \\frac {F_2} {A_2}}",
+                        }]
+                    }]
+                }, {
+                    topico: "Empuxo",
+                    perguntas: [{
+                        pergunta: "O que diz o princípio de Arquimedes?",
+                        resposta: "Um fluido faz uma força vertical para cima na parte submersa de um corpo.",
+                        nestedQuestions: [{
+                            pergunta: "Qual a fórmula para o cálculo do empuxo?",
+                            math: "\\boxed {E = \\mu_{líq}. V_{submerso \\; do \\; corpo}. \\; g}",
+                        }, {
+                            pergunta: "Qual a condição de flutuação?",
+                            math: "Empuxo = Peso"
+                        }]
                     }]
                 }],
             }
@@ -416,11 +482,20 @@ let Dados = {
                     perguntas: [{
                             pergunta: "Qual foram os dois agrupamentos militares e quais países faziam parte de cada um?",
                             resposta: "EIXO: Alemanha, Itália e Japão <br> ALIADOS: URSS, EUA, Inglaterra, França",
-                            imagemResposta: "https://1.bp.blogspot.com/-Br_gosLXecE/ULdHZRclu2I/AAAAAAAAAFQ/T08ws-H--aQ/s1600/Apresenta%C3%A7%C3%A3o1.jpg"
-                        },
-                        {
-                            pergunta: "Em que ano acabou?",
-                            resposta: "1945"
+                            imagemResposta: "https://1.bp.blogspot.com/-Br_gosLXecE/ULdHZRclu2I/AAAAAAAAAFQ/T08ws-H--aQ/s1600/Apresenta%C3%A7%C3%A3o1.jpg",
+                            nestedQuestions: [{
+                                pergunta: "Em que ano acabou?",
+                                resposta: "1945"
+                            }, {
+                                pergunta: "Pergunta",
+                                imagemResposta: "https://1.bp.blogspot.com/-Br_gosLXecE/ULdHZRclu2I/AAAAAAAAAFQ/T08ws-H--aQ/s1600/Apresenta%C3%A7%C3%A3o1.jpg"
+                            },{
+                                pergunta: "Pergunta",
+                                imagemResposta: "https://1.bp.blogspot.com/-Br_gosLXecE/ULdHZRclu2I/AAAAAAAAAFQ/T08ws-H--aQ/s1600/Apresenta%C3%A7%C3%A3o1.jpg"
+                            },{
+                                pergunta: "Pergunta",
+                                imagemResposta: "https://1.bp.blogspot.com/-Br_gosLXecE/ULdHZRclu2I/AAAAAAAAAFQ/T08ws-H--aQ/s1600/Apresenta%C3%A7%C3%A3o1.jpg"
+                            },]
                         },
                     ]
                 }, ]
@@ -497,6 +572,10 @@ let Dados = {
                     }, {
                         pergunta: "Quais as principais características?",
                         resposta: "Começo na Inglaterra (déspotas esclarecidos de outros países tomam iniciativas de fomento à manufatura para competição)",
+                        nestedQuestions: [{
+                            pergunta: "O que são os déspotas esclarecidos?",
+                            resposta: "resposta"
+                        }]
                     }, {
                         pergunta: "Quais foram as consequências?",
                         resposta: "Surgimento do proletariado urbano"
