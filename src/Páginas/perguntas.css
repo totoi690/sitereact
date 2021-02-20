@@ -12,29 +12,29 @@
 
 .justcolor1 {
   background-color: var(--color6);
-  margin-left: -.44vw;
-  margin-right: -.44vw;
+
 }
 
 .justcolor2 {
   background-color: var(--color4);
-  margin-left: -.44vw;
-  margin-right: -.44vw;
+
 }
 
 .totalDiv {
   position: -webkit-sticky;
-  /* Safari */
   position: sticky;
-  top: 0;
-  left: 0;
-  right: 0;
   padding: .25em;
   background-color: var(--color6);
   color: var(--color1);
   z-index: 1;
-  margin-left: -.44vw;
-  margin-right: -.44vw;
+  padding: .3em;
+  margin-left: -.3em;
+  margin-right: -.3em;
+}
+
+.totalSpan {
+  font-style: italic;
+  font-weight: 600
 }
 
 .res {
@@ -60,12 +60,13 @@
   margin-bottom: 1em;
   border: 2px solid black;
   transition: transform 0.5s, background-color .4s;
-  padding-left: .6em;
-  padding-right: .6em;
+  padding-left: 1em;
+  padding-right: 1em;
   background-color: var(--color9);
   cursor: pointer;
   z-index: 1;
 }
+
 
 .card-animated {
   transform: rotateY(180deg);
@@ -132,6 +133,16 @@
   font-style: italic;
 }
 
+.obs {  
+  position: absolute;
+  bottom: 1.7em;
+  left: 0;
+  font-size: 70%;
+  height: 70%;
+  font-style: italic;
+  font-weight: 300
+}
+
 .check {
   position: absolute;
   top: .3em;
@@ -145,7 +156,7 @@
   margin-right: calc(var(--cardMargin) + .1em);
 }
 
-.pointcontainer {
+.pointcontainer, .obscontainer {
   position: relative
 }
 
@@ -155,6 +166,8 @@
   max-width: 60%;
   max-height: 60%;
 }
+
+.envolta {position: relative;}
 
 .topico {
   margin-left: var(--cardMargin);
@@ -226,24 +239,24 @@
   padding-bottom: -1em;
 }
 
-.horizontalLine {
-  position: absolute;
-  top: 50%;
-  left: 24.5%;
-  border-top: .12em solid var(--color4);
-  width: 2%;
-  z-index: -1;
-}
-
 .nestedQuestionsDiv {
   position: relative;
   max-height: max-content;
 }
 
-.toggleNestedDiv {
+.toggleNestedDiv, .description {
   position: relative;
   margin-left: var(--cardMargin);
   margin-right: calc(var(--cardMargin) - 2em);
+}
+
+.description {
+  margin-top: -.5em;
+  margin-bottom: .2em;
+  font-size: 95%;
+  font-style:italic;
+  font-weight: 300;
+  color: var(--color4);
 }
 
 .toggleNested {
@@ -252,12 +265,15 @@
   border: none;
   border-right: .2em solid var(--color11);
   height: 100%;
-  width: -1%;
-  top: -11%;
-  left: 19.5%;
   size: 100%;
-  padding-left: 2em;
   overflow: hidden;
+  margin-left: calc(var(--cardMargin) - 3em);
+  margin-right: var(--cardMargin);
+  margin-bottom: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  cursor: pointer;
+  z-index: 1;
 }
 
 .under {

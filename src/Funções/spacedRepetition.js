@@ -105,6 +105,7 @@ class SpacedRepetition extends React.Component {
                 let index = el.index
                 let nestedQuestions = el.object.nestedQuestions
                 let math = el.object.math
+                let description = el.object.description
                 data.setDate(data.getDate() + this.calcularIntervalo(el.object.pontos, el.object.cor))
                 let dataFormatada = ((data.getDate() )) + "/" + ((data.getMonth() + 1)) + "/" + data.getFullYear();
                 
@@ -124,6 +125,7 @@ class SpacedRepetition extends React.Component {
                                 topico={topico}
                                 nestedQuestions={nestedQuestions}
                                 math={math}
+                                description={description}
                             />
                         </div>
                     )

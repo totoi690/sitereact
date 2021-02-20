@@ -2,6 +2,7 @@ import React from 'react'
 import RenderTopico from "../Funções/renderTopico"
 import { CSSTransition } from "react-transition-group"
 import "../App.css"
+import Translate from "../Funções/translate"
 
 class RenderCards extends React.Component {
     constructor() {
@@ -65,7 +66,7 @@ class RenderCards extends React.Component {
                 return(
                     <>
                     {element.topico !== undefined ? 
-                    <div className="topico" onClick={() => { this.mudarstat(index) }}> {element.topico} </div> 
+                    <div className="topico" onClick={() => { this.mudarstat(index) }}> {Translate(element.topico, "t")} </div> 
                     : null}
                     
                     {this.state.card[index] === true && element.topico !== undefined ?    

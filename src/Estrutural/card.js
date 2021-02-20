@@ -2,13 +2,19 @@ import React from 'react'
 import calcularPontuacao from "../Funções/pontuação.js"
 import RenderNestedQuestions from "../Funções/renderNestedQuestions"
 import 'katex/dist/katex.min.css';
-import { BlockMath } from 'react-katex';
+import { BlockMath, InlineMath } from 'react-katex';
+import Translate from "../Funções/translate"
 
 class Card extends React.Component {
     constructor() {
         super()
-        this.state = {frente: true, fade: false, toggle: true}
+        this.state = {frente: true, fade: false, toggle: false}
+        this.handler = this.handler.bind(this)
     }
+
+    handler(prop1, prop2) {
+        this.setState({[prop1]: prop2})
+      }
 
     render() {
         let mudarCor = (prop) => {
@@ -34,8 +40,8 @@ class Card extends React.Component {
                 cor: mudarCor(pontos)
             })
             calcularPontuacao(pontos, this.props.index, this.props.tema, mudarCor(pontos), newDate()); 
+            this.setState({toggle :true})
         }
-
 
         let arePoints = false
         if (pontos !== undefined) {
@@ -44,12 +50,13 @@ class Card extends React.Component {
 
         return (<>
         <div className="cardHolderDiv">
-                    {this.props.nestedQuestions !== undefined  && pontos !== 0 && pontos !== undefined ? 
-            <hr className="toggleNested" onClick={() => {this.setState((prevState) => {return({toggle: !prevState.toggle})})}}>
-    </hr> : null}
+            {(this.props.nestedQuestions !== undefined  && pontos !== 0 && pontos !== undefined) || (this.props.nestedQuestions !== undefined && (this.props.resposta === undefined || this.props.resposta === ""))? 
+            <div className="toggleNested" onClick={() => {this.setState((prevState) => {return({toggle: !prevState.toggle})})}}>
+            </div> : null}
                     
-        {this.props.pergunta !== undefined ? <>
-        <div className={this.state.fade ? 'card' : 'card-animated'} style={arePoints ? {backgroundColor: "#" + corselecionada()} : null} onClick={() => {this.setState(prevState => {return {frente: !prevState.frente, fade: !prevState.fade}})}}>
+         <>
+        <div className={this.state.fade ? 'card' : 'card-animated'} style={arePoints ? {backgroundColor: "#" + corselecionada()} : null} 
+        onClick={(this.props.math !== undefined || (this.props.resposta !== "" && this.props.resposta !== undefined) || this.props.imagemResposta !== undefined) ? () => {this.setState(prevState => {return {frente: !prevState.frente, fade: !prevState.fade}})} : () => {this.setState((prevState) => {return({toggle: !prevState.toggle})})}}>
 
             {this.state.frente ?
                 <>
@@ -60,36 +67,45 @@ class Card extends React.Component {
 
                 <div className="isFlipped">
                     <p>
-                    <b className="per">Pergunta: </b>
-                    <span className="res"><span dangerouslySetInnerHTML={{__html: this.props.pergunta}}></span></span>
+                    <b className="per"> { this.props.pergunta !== undefined ? "Pergunta:": this.props.destaque !== undefined ? Translate(this.props.destaque, "d") : null} </b>
+                    <span className="res"><span dangerouslySetInnerHTML={{__html: Translate(this.props.pergunta, "p")}}></span></span>
                     {this.props.imagemPergunta !== undefined ? <p className="imagemPerguntaDiv"><img className="imagemPergunta" alt="imagem pergunta" src={this.props.imagemPergunta}></img></p> : null}
                     </p>
                 </div>
+
+                { this.props.obs ?
+                <div className="obscontainer, isFlipped">
+                    <span className="obs">OBS</span>
+                </div> : null}
                 </> : 
 
                 <div className={this.state.fade ? "" : 'isFlipped'}>
                     <p>
-                    <b className="per">Resposta: </b> 
-                    <span className="res"><span dangerouslySetInnerHTML={{__html: this.props.resposta}}></span></span>
+                    <b className="per">{this.props.resposta !== undefined || this.props.resposta === "" ? "Resposta: ": null}</b> 
+                    <span className="res"><span dangerouslySetInnerHTML={{__html: Translate(this.props.resposta, "r")}}></span></span>
                     {this.props.math !== undefined ? <p className="math"><BlockMath math={this.props.math}/></p> : null}
                     {this.props.imagemResposta !== undefined ? <p className="imagemRespostaDiv"><img className="imagemResposta" alt="imagem resposta" src={this.props.imagemResposta}></img></p> : null}
                     </p> 
 
+                {this.props.math !== undefined || this.props.resposta !== undefined || this.props.resposta === "" ? 
                 <p>
-                    <button onClick={() => funcao(3)}>Acertei fácil!</button> <button onClick={() => funcao(2)}>Acertei, mas difícil!</button> <button onClick={() => funcao(1)}>Errei!</button></p>
+                    <button onClick={() => funcao(3)}>Acertei fácil!</button> <button onClick={() => funcao(2)}>Acertei, mas difícil!</button> <button onClick={() => funcao(1)}>Errei!</button>
+                </p>: null}
                 </div>          
                 }
                         
         </div> </>
-        : null}
+
         </div>
 
 
-        {this.state.toggle && this.props.nestedQuestions !== undefined  && pontos !== 0 && pontos !== undefined ? 
+        {this.state.toggle && this.props.nestedQuestions !== undefined  && ((pontos !== 0 && pontos !== undefined) || (this.props.resposta === undefined || this.props.resposta === "")) ? 
         <div className="cont">
             <div className={ "verticalLine"}></div>
+            {this.props.description !== undefined ? <div className="description">{this.props.description}</div> : null}
             <RenderNestedQuestions 
-            handler={this.props.handler} 
+            handler={this.props.handler}
+            changehandler={this.handler}
             tema={this.props.tema}
             index={this.props.index}
             toggle={this.state.toggle}

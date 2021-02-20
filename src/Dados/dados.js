@@ -11,7 +11,7 @@ let Dados = {
                     topico: "Sangue",
                     perguntas: [{
                         pergunta: "Quais as diferenças entre sangue venoso e sangue arterial?",
-                        resposta: "VENOSO: sangue pobre em oxigênio e rico em CO2.<br>ARTERIAL: sangue rico em oxigênio e pobre em CO2."
+                        resposta: "VENOSO: sangue pobre em oxigênio e rico em CO2.ARTERIAL: sangue rico em oxigênio e pobre em CO2."
                     }, {
                         pergunta: "Quais as diferenças entre veias e artérias?",
                         resposta: "VEIAS: vaso que CHEGA do coração, com válvulas. ARTÉRIAS: vaso que SAI do coração, parede mais grossa"
@@ -42,37 +42,168 @@ let Dados = {
                             resposta: "Ventrículo DIREITO, para o PULMÃO, por meio da ARTÉRIA PULMONAR"
                         }, {
                             pergunta: "Quais são as quatro válvulas cardíacas? Onde cada uma fica?",
-                            resposta: "TRÍCÚSPIDE: entre o átrio direito e o ventrículo direito<br>BICÚSPIDE: entre o átrio esquerdo e o ventrículo esquerdo<br>AÓRTICA: na entrada da artéria aórta<br>TRÍCÚSPIDE: na entrada da artéria pulmonar"
+                            resposta: "TRÍCÚSPIDE: entre o átrio direito e o ventrículo direitoBICÚSPIDE: entre o átrio esquerdo e o ventrículo esquerdoAÓRTICA: na entrada da artéria aórtaTRÍCÚSPIDE: na entrada da artéria pulmonar"
                         }, {
                             pergunta: "Caracterize os movimentos de sístole e diástole, dizendo em qual o sangue entra e em qual sai",
-                            resposta: "SÍSTOLE: CONTRAÇÃO → sangue entra no coração <br> DÍALOLE: RELAXAMENTO → sangue saí do coração"
+                            resposta: "SÍSTOLE: CONTRAÇÃO → sangue entra no coração  DÍALOLE: RELAXAMENTO → sangue saí do coração"
                         },
                     ]
                 }, ]
             },
-            ecologia: {
-                nome: "Ecologia",
+            conceitosdeecologia: {
+                nome: "Conceitos de Ecologia",
                 id: 2,
                 gif: "https://cdn.dribbble.com/users/969828/screenshots/2857364/food_chain_dribbble_v2.gif",
                 perguntas: [{
-                    topico: "Cadeia alimentar",
-                    perguntas: [{
-                        pergunta: "O que é uma cadeia alimentar",
-                        resposta: "sei la",
-                    }, ]
-                }, ]
+                    topico: ' CONCEITOS BÁSICOS',
+                    perguntas: [
+                      {
+                        pergunta: '- **Defina** cada um dos conceitos',
+                        resposta: '',
+                        nestedQuestions: [
+                          {
+                            destaque: '- **POPULAÇÃO**',
+                            resposta: '- Conjunto de indivíduos da mesma espécie que vivem na mesma área e época'
+                          },
+                          {
+                            destaque: '- **COMUNIDADE (BIOCENOSE)**',
+                            resposta: '- Conjunto de populações de diferentes espécies que vivem na mesma área e época'
+                          },
+                          {
+                            destaque: '- **ECOSSISTEMA**',
+                            resposta: '- Interação entre fatores bióticos e abióticos'
+                          },
+                          {
+                            destaque: '- **BIOSFERA**',
+                            resposta: '- Conjunto de todas as regiões do planeta onde são encontrados seres vivos'
+                          },
+                          {
+                            destaque: '- **BIOMA**',
+                            resposta: '- Ecossistemas com características semelhantes'
+                          },
+                          { destaque: '- **HABITAT**', resposta: '- Lugar onde vive' },
+                          {
+                            destaque: '- **NICHO ECOLÓGICO**',
+                            resposta: '- Papel do organismo na comunidade'
+                          }
+                        ]
+                      }
+                    ]
+                  }, {
+                    topico: ' NÍVEIS TRÓFICOS',
+                    perguntas: [
+                      {
+                        pergunta: '- **Defina** cada um dos níveis tróficos, sua **função** e **quais organismos** geralmente as ocupam',
+                        resposta: '',
+                        nestedQuestions: [
+                          {
+                            destaque: '- **CONSUMIDORES**',
+                            resposta: '- Se alimentam dos organismos de outros níveis'
+                          },
+                          {
+                            destaque: '- **PRODUTORES**',
+                            resposta: '- Produzem matéria orgânica e são base das cadeias alimentares - Ocupada por organismos autótrofos (plantas e algas)'
+                          },
+                          {
+                            destaque: '- **DECOMPOSITORES**',
+                            resposta: '- Reciclam a matéria orgânica, geralmente ocupada por fungos e bactérias - *OBS*: Animais necrófagos (que comem animais mortos), como os urubus, e animais detritívoros (que comem restos de folhas, fezes, etc.), como as minhocas, NÃO são decompositores.'
+                          }
+                        ]
+                      }
+                    ]
+                  }, {
+                    topico: ' CADEIAS E TEIAS ALIMENTARES',
+                    perguntas: [
+                      {
+                        pergunta: '- Qual a diferença entre **teia** e **cadeia alimentar**?',
+                        imagemResposta: "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/7f9639b1-2b1d-47cd-86a7-58bedb90ddd2/cadeia_alimentar.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210220%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210220T013000Z&X-Amz-Expires=86400&X-Amz-Signature=b32d2852f78190b908883a817b305e070adab8fcaa331c31ad2facd74b4f4317&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22cadeia_alimentar.png%22",
+                        resposta: '- Enquanto a **cadeia** é uma sequência de populações onde uma serve de alimento a outra, a **teia** é um conjunto de cadeias alimentares (na teia um organismo pode ocupar mais de um nível trófico)'
+                      }
+                    ]
+                  } ]
             },
-            botânica: {
-                nome: "Botânica",
+            transpiraçãovegetal: {
+                nome: "Transpiração Vegetal",
                 id: 3,
                 gif: "https://media0.giphy.com/media/1iLVjz6PbgRuOOxa/giphy.gif",
                 perguntas: [{
-                    topico: "Flor",
-                    perguntas: [{
-                        pergunta: "O que é uma planta?",
-                        resposta: "floi"
-                    }, ]
-                }, ]
+                  topico: 'Conceitos básicos',
+                  perguntas: [
+                    {
+                      pergunta: '- Qual o **papel** da transpiração?',
+                      resposta: '- Regulação térmica e condução da seiva bruta'
+                    },
+                    {
+                      pergunta: '- Qual o **papel** da **cutícula**? Do que é composta? Que problema a **quantidade excessiva** gera para a planta?',
+                      resposta: '- Composta por substâncias hidrofóbicas (cera), dificulta a saída de água - **PROBLEMA**: dificulta a entrada de CO2'
+                    },
+                    {
+                      pergunta: '- Quais são os **tipos** de transpiração dos vegetais? São **constantes**?',
+                      resposta: '- **Cuticular** → constante, pela cutícula - **Estomática** → variável, pelos estômatos'
+                    }
+                  ]
+                }, {
+                  topico: 'Estômatos',
+                  perguntas: [
+                    {
+                      pergunta: '- Qual o **papel do estômato** para a planta?',
+                      resposta: '- Executar trocas gasosas e permitir a fotossíntese'
+                    },
+                    {
+                      pergunta: '- Identifique no estômato abaixo as **estruturas**',
+                      imagemPergunta: "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/66692ff8-f6db-4379-b052-dbf04707a4f2/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210220%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210220T141543Z&X-Amz-Expires=86400&X-Amz-Signature=b1e2f902ab52b03c659d779ab7114f434d659b624956746e4605048e21634b9c&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22",
+                      resposta: `- I -> Ostíolo
+                      - II -> Célula-Guarda
+                      - III -> Célula-Companheira`
+                    },
+                    {
+                      pergunta: '- Do que o **movimento estomático** depende?',
+                      resposta: '',
+                      nestedQuestions: [
+                        {
+                          pergunta: '- **Quantidade de água nas células-guarda**',
+                          resposta: '- MUITA ÁGUA → ABRE - POUCA ÁGUA → FECHA'
+                        },
+                        {
+                          pergunta: '- **Concentração de íons K+ nas células guarda**',
+                          resposta: '- MUITO CONCENTRADO → ABRE - POUCO CONCENTRADO → FECHA'
+                        }
+                      ]
+                    },
+                    {
+                      pergunta: '- Quais são os mecanismos de **abertura** e **fechamento**?',
+                      resposta: '',
+                      nestedQuestions: [
+                        {
+                          destaque: '- **HIDROATIVO**',
+                          resposta: '- SEM ÁGUA → FECHA DE QUALQUER MODO - COM ÁGUA → PODEM ABRIR'
+                        },
+                        {
+                          destaque: '- **FOTOATIVO**',
+                          resposta: '- COM LUZ → ABREM - SEM LUZ → FECHAM'
+                        },
+                        {
+                          destaque: '- **CONCENTRAÇÃO DE CO2**',
+                          resposta: '- POUCO CO2 E CO2 ÓTIMO → PODE ABRIR - MUITO CO2 → FECHA DE QUALQUER MODO'
+                        },
+                        {
+                          pergunta: '- **EXERCÍCIO**: Para uma planta abrir os estômatos, como devem estar a **água no solo, a luz e a concentração de CO2 no ambiente**?',
+                          resposta: '- ÁGUA: deve ter - LUZ: deve ter - CO2: pouco ou o suficiente'
+                        }
+                      ]
+                    },
+                    {
+                      pergunta: '- Como é a **curva de fechamento estomático**?',
+                      imagemResposta: 'https://djalmasantos.files.wordpress.com/2011/05/0711.jpg',
+                      nestedQuestions: [
+                        {
+                          pergunta: '- O que a linha, quando fica **constante**, representa?',
+                          resposta: '- Representa o **fechamento total dos estômatos** e a permanência apenas da **transpiração cuticular**'
+                        }
+                      ]
+                    }
+                  ]
+                } ]
             },
             biotecnologia: {
                 nome: "Biotecnologia",
@@ -90,7 +221,7 @@ let Dados = {
                         },
                         {
                             pergunta: "Quais enzimas são utilizadas e quais suas funções?",
-                            resposta: `- <span class="bold">Enzimas de restrição</span>: corte do DNA nos segmentos escolhidos <br>
+                            resposta: `- <span class="bold">Enzimas de restrição</span>: corte do DNA nos segmentos escolhidos 
                         - <span class="bold">DNA ligase</span>: ligação das extremidades`,
                         },
                     ]
@@ -146,7 +277,7 @@ let Dados = {
                         resposta: "Água e sais minerais"
                     },{
                         pergunta: "Quais são os dois tipos de células condutoras do xilema? Quais as caracteristicas de cada uma?",
-                        resposta: "<span class='bold'>Traqueídes</span> são células finas. Na extremidade de cada traqueíde, assim como lateralmente, há uma série de pontuações ou poros (pequeníssimos orifícios) que permitem a passagem de seiva no sentido longitudinal e lateral. <br> Menores que as traqueídes, porém mais longos , os <span class='bold'>elementos de vaso</span> também possuem pontuações laterais que permitem a passagem da seiva. Sua principal característica é que em suas extremidades as paredes são perfuradas, isto é, não há parede divisória totalmente isolante entre uma e outra célula."
+                        resposta: "<span class='bold'>Traqueídes</span> são células finas. Na extremidade de cada traqueíde, assim como lateralmente, há uma série de pontuações ou poros (pequeníssimos orifícios) que permitem a passagem de seiva no sentido longitudinal e lateral.  Menores que as traqueídes, porém mais longos , os <span class='bold'>elementos de vaso</span> também possuem pontuações laterais que permitem a passagem da seiva. Sua principal característica é que em suas extremidades as paredes são perfuradas, isto é, não há parede divisória totalmente isolante entre uma e outra célula."
                     }, {
                         pergunta: "Além da função de condução da seiva, os vasos do xilema também apresentam outra função muito importante. Qual? Que substância permite isso?",
                         resposta: "Função de SUSTENTAÇÃO, por meio da impregnação com a LIGNINA"
@@ -179,6 +310,280 @@ let Dados = {
                     }, ]
                 }, ]
             },
+            zoologia01: {
+                nome: "Zoologia I",
+                id: 6,
+                gif: "https://i.gifer.com/3BHx.gif",
+                perguntas: [{
+                    topico: "Poríferos",
+                    perguntas: [{
+                        pergunta: `Quais são as **características gerais** dos poríferos?`,
+                        nestedQuestions: [{
+                            destaque: `HABITAT`,
+                            resposta: `- exclusivamente aquáticos (maioria marinhos);`,
+                        },{
+                            destaque: `TECIDOS`,
+                            resposta: `- Parazoários → não possuem tecidos`,
+                        },{
+                            destaque: `DIGESTÃO`,
+                            resposta: `- Intracelular`,
+                        },{
+                            destaque: `RESPIRAÇÃO`,
+                            resposta: `- Difusão`,
+                        },{
+                            destaque: `CIRCULAÇÃO`,
+                            resposta: `- Avasculares`,
+                        },{
+                            destaque: `EXCREÇÃO`,
+                            resposta: `- Difusão`,
+                        },{
+                            destaque: `SISTEMA NERVOSO`,
+                            resposta: `- Ausente`,
+                        },{
+                            destaque: `SIMETRIA`,
+                            resposta: `- Radial`,
+                        },]
+                    },{
+                        pergunta: `- Quais as **principais células** dos poríferos?`,
+                        resposta: "Porócitos, amebócitos, pinacócitos, espículas e coanócitos",
+                        nestedQuestions: [{
+                            destaque: `Porócitos`,
+                            resposta: `- células com um buraco que permitem a passagem de água do meio para o átrio/espongiocele`,
+                        },{
+                            destaque: `Amebócitos`,
+                            resposta: `- células-tronco das esponjas. Podem se diferenciar.`,
+                        },{
+                            destaque: `Pinacócitos`,
+                            resposta: `- células que garantem revestimento e proteção.`,
+                        },{
+                            destaque: `Espículas`,
+                            resposta: `- estruturas esqueléticas, compostas por calcário, sílica ou espongina.`,
+                        },{
+                            destaque: `Coanócitos`,
+                            resposta: `- Mantêm o fluxo de água, captura de alimentos, realizam a digestão intracelular (com ajuda dos amebócitos)`,
+                        },]
+                    },{
+                        pergunta: `- O que é o **mesênquima** ou meso-hilo?`,
+                        resposta: `É uma matriz proteica gelatinosa que contém material esquelético (espículas) e amebócitos. Equivale ao tecido conjuntivo dos eumetazoários.`,
+                    },{
+                        pergunta: `Qual a *forma de reprodução* dos poríferos?`,
+                        resposta: `- por *brotamento/gemiparidade*, por *fragmentação/regeneração* ou *gemulação* (apenas em esponjas dulcícolas).`,
+                    },]
+                },{
+                    topico: "Cnidários",
+                    perguntas: [{
+                        pergunta: `Quais são as *características gerais* dos cnidários?`,
+                        nestedQuestions: [{
+                            destaque: `HABITAT`,
+                            resposta: `- exclusivamente aquáticos (maioria marinhos);`,
+                        },{
+                            destaque: `TECIDOS`,
+                            resposta: `- eumetazoários (formam tecidos verdadeiros);
+                            - diblásticos;`,
+                        },{
+                            destaque: `DIGESTÃO`,
+                            resposta: `- enterozoários (cavidade digestória);
+                            - Intracelular + Extracelular`,
+                        },{
+                            destaque: `RESPIRAÇÃO`,
+                            resposta: `- Difusão`,
+                        },{
+                            destaque: `CIRCULAÇÃO`,
+                            resposta: `- Avasculares`,
+                        },{
+                            destaque: `EXCREÇÃO`,
+                            resposta: `- Difusão`,
+                        },{
+                            destaque: `SISTEMA NERVOSO`,
+                            resposta: `- células nervosas e sistema nervoso difuso (coordenação);`,
+                        },{
+                            destaque: `SIMETRIA`,
+                            resposta: `- Radial`,
+                        },]
+                    },{
+                        pergunta: `Quais são as **novidades evolutivas**?`,
+                        resposta: `- etapa de gástrula no desenvolvimento embrionário, dois folhetos embrionários (endoderme e ectoderme), neurônios, células musculares, tecidos verdadeiros, cavidade para digestão extracelular e boca, cnidócitos, protostomia, sistema nervoso difuso, sistema digestório.`,
+                    },{
+                        pergunta: `Quais as **principais estruturas** dos cnidários?`,
+                        resposta: `- tentáculos, mesogleia e cnidócitos`,
+                        nestedQuestions: [{
+                            destaque: "mesogleia",
+                            resposta: `- camada gelatinosa onde se encontram as células nervosas`
+                        }, {
+                            destaque: "cnidócitos",
+                            resposta: `- Células responsáveis pelas queimaduras.`
+                        }]
+                    },{
+                        pergunta: `Quais as **formas de reprodução** dos cnidários?`,
+                        nestedQuestions: [{
+                            destaque: "sexuada",
+                            resposta: "- fecundação cruzada (interna ou externa)"
+                        }, {
+                            destaque: "assexuada",
+                            resposta: "- brotamento e regeneração"
+                        }]
+                    },{
+                        pergunta: `O que é a **alternância de gerações ou metagênese**?`,
+                        resposta: `Gerações alternam-se entre pólipo (rep. assexuada) e medusa (rep. sexuada).`,
+                        imagemResposta: "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/d8c9d7be-413b-4687-a9ec-b285f0229b6a/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210214%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210214T205718Z&X-Amz-Expires=86400&X-Amz-Signature=6e72d67f18e9a958dd57aa90909417d7475fcc90bb465a288fed51fb5688e9bb&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22"
+                    },]
+                },{
+                    topico: "Platelmintos",
+                    perguntas: [{
+                        pergunta: `Quais são as *características gerais* dos platelmintos?`,
+                        nestedQuestions: [{
+                            destaque: `HABITAT`,
+                            resposta: `terrestres, aquáticos ou endoparasitas;`,
+                        },{
+                            destaque: `TECIDOS`,
+                            resposta: `- eumetazoários (formam tecidos verdadeiros);
+                            - triblásticos;`,
+                        },{
+                            destaque: `DIGESTÃO`,
+                            resposta: `- **enterozoários incompletos**: única abertura para o meio (boca) e digestão extra e intracelular;
+                            - Intracelular + Extracelular`,
+                        },{
+                            destaque: `RESPIRAÇÃO`,
+                            resposta: `- Difusão`,
+                        },{
+                            destaque: `CIRCULAÇÃO`,
+                            resposta: `- ausência de sistema circulatório (distribuição de substâncias através da cavidade digestória ramificada).`,
+                        },{
+                            destaque: `EXCREÇÃO`,
+                            resposta: `- Células-flama
+                            - excreta amônia`,
+                        },{
+                            destaque: `SISTEMA NERVOSO`,
+                            resposta: `- células nervosas e sistema nervoso difuso (coordenação);
+                            - sistema nervoso centralizado, ganglionar e ventral;
+                            - os representantes de vida-livre apresentam ocelos (responsáveis pela fotorrecepção - claro/escuro) e aurículas (percepção tátil e química).`,
+                        },{
+                            destaque: `SIMETRIA`,
+                            resposta: `- Bilateral`,
+                        },]
+                    },{
+                        pergunta: `Quais são as *novidades evolutivas*?`,
+                        resposta: `- três folhetos embrionários (endoderme, mesoderme e ectoderme), simetria bilateral, cefalização, sistema excretor, sistema nervoso ganglionar, corpo achatado.`,
+                    },{
+                        pergunta: `Os platelmintos são divididos em *3 classes principais*. Quais são suas *características e nomes*?`,
+                        resposta: ``,
+                    },{
+                        pergunta: `Quais as formas de *reprodução* dos platelmintos?`,
+                        nestedQuestions: [{
+                            destaque:`Assexuada`,
+                            resposta: `- Fragmentação e Regeneração (assexuada)
+                            - Estrobilização (assexuada - classe Cestoda)
+                            - autofecundação (classe Cestoda)`,
+                        },{
+                            destaque:`Sexuada`,
+                            resposta: `- Fecundação (sexuada)`,
+                        },
+                        {
+                            pergunta:`Quais são as características do desenvolvimento embrionário?`,
+                            resposta: `- Externo
+
+                            - Direto (Classes Turbellaria e Monogenea)
+                            
+                            - Indireto (Classes Turbellaria, Trematoda e Cestoda)`,
+                        },],
+                    },]
+                },]
+            },
+            ciclosbiogeoquimicos: {
+                nome: "Ciclos biogeoquimícos",
+                id: 7,
+                gif:"https://i.pinimg.com/originals/06/57/bf/0657bf80f7b1223303e3ea755f9d25de.gif",
+                perguntas: [{
+                    topico: ' Ciclo da água',
+                    perguntas: [
+                      {
+                        pergunta: '- Qual a importância da água?',
+                        resposta: '- Solvente; participa das reações metabólicas (funcionamento enzimático) - Principal componente dos seres vivos; transporte de substâncias - Regulação térmica'
+                      },
+                      {
+                        pergunta: '- Onde e como a água está disponível na terra?',
+                        resposta: '- Ocupa 75% da superfície terrestre',
+                        imagemResposta: "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/1ba97d4c-ba19-41f6-9e14-111198bed8b9/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210220%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210220T005650Z&X-Amz-Expires=86400&X-Amz-Signature=599ca3e3d8c001e5a88e92d131e2ae5f0eb70d867aa658c46d45fb98aee5731e&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22"
+                      },
+                      {
+                        pergunta: '- Quais são fases do ciclo da água?',
+                        resposta: '- Pequeno ciclo (chuvas), grande ciclo (seres vivos)',
+                        imagemResposta: "https://lh5.googleusercontent.com/Ni2oGZdaU3XZtz-iQfURk4epVVDNI9U-uduDAD_2nIxFMKn0_z76PTRVjU7lKeF9yOdAB3ed1-zxA0ZF9ZvPvonfjiLQmRXJvhYqRhpK9oDG4q_ut7qqjcL3FpF0TTvWOVFk23s"
+                      }
+                    ]
+                  },{
+                    topico: ' Ciclo do carbono',
+                    perguntas: [
+                      {
+                        pergunta: '- Qual a importância do carbono?',
+                        resposta: '- Componente de todas as moléculas orgânicas dos seres vivos - Contribui para o efeito estufa (retém calor)'
+                      },
+                      {
+                        pergunta: '- Onde e como está disponível na terra?',
+                        resposta: '- Componente do CO2 (0,04% do ar atmosférico) - Presente nos combustíveis fósseis'
+                      },
+                      {
+                        pergunta: '- Quais são as fases do ciclo da carbono?',
+                        imagemResposta: "https://lh6.googleusercontent.com/DRlxwXhVCLWE0Oo3H4M7bg7ob--FOwBR5ZRJEnaqizZLSqNk26vC702KGLXJ_zE7Bg7kNkPq52i2N4CoJWfTmstWC7-vSt7xLOtqfzy0aVZaP7laMY-WMo_HrfhhNp8uKhZthaI",
+                        resposta: '- Captado por seres fotossintetizantes na forma de matéria orgânica - Obtido pelos animais pela nutrição. - Apenas um nível trófico pode retirá-la do ambiente (produtores) e todos podem devolver para a atmosfera (respiração, fermentação, decomposição) - A matéria orgânica não decomposta se torna combústivel fóssil.'
+                      }
+                    ]
+                  }, {
+                    topico: ' Ciclo do nitrogênio',
+                    perguntas: [
+                      {
+                        pergunta: '- Qual a importância do nitrogênio? Onde está disponível?',
+                        resposta: '- Componente do N2 (78% do ar atmosférico), proteínas, ácidos nucleicos e clorofila.'
+                      },
+                      {
+                        pergunta: '- Quais são as fases do ciclo do nitrogênio?',
+                        resposta: '',
+                        nestedQuestions: [
+                          {
+                            destaque: '- Fixação',
+                            imagemResposta: "https://lh4.googleusercontent.com/rZfBY8b_5b6K9YDf1ecl89zZ7oNc0H5KUhM8QRju9jQfYmEhKPG7AhfwhKXKdogW_vmVgy-ZP_Nybpux6goi1sKcpYmgK1cTBQ5fd7kZl5zcWzfTj34dO6169jD74JW-eYfwjSs",
+                            resposta: '- **Atmosférica/física**: reação do N2  atmosférico com O2 usando energia de descargas elétricas, formando NO-3(nitrato) - **Biológica**: produção de amônia (enzima nitrogenase) por bactérias/cianobactérias de vida livre ou associadas às raízes de plantas ➝ bactéria *Rhizóbium* em leguminosas (mutualismo)'
+                          },
+                          {
+                            destaque: '- Amonificação',
+                            resposta: '- Transformação de compostos e excretas nitrogenadas (ureia) em amônia (NH3), por bactérias e fungos decompositores.'
+                          },
+                          {
+                            destaque: '- Nitrificação',
+                            resposta: '- Transformação de amônia (NH3) em nitrato (NO3-) - Ocorre em 2 etapas: - ↳ Nitrosação: bactéria *Nitrosomonas* (NH3 ➝ NO2-) - ↳ Nitratação: bactéria *Nitrobacter* (NO2- → NO3-)'
+                          },
+                          {
+                            destaque: '- Desnitrificação',
+                            resposta: '- Transformação do NO3-(NH3 ou NO2-) em N2 por bactérias desnitrificantes (*Pseudomonas*)'
+                          },
+                          {
+                              destaque: 'Imagem do ciclo',
+                              imagemResposta: "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/0a94ef5b-e7f4-4cf7-945f-0237a52c9ebf/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210220%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210220T005702Z&X-Amz-Expires=86400&X-Amz-Signature=0ae2c8c31827933539f2c64f5133156dda788a294ef5912cdedb1f8545b56638&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22"
+                          }
+                        ]
+                        
+                      },
+                      {
+                        pergunta: '- Qual o uso de leguminosas na agricultura? Quais são os métodos usados?',
+                        resposta: '- Aumentam o nitrogênio no solo.',
+                        nestedQuestions: [
+                          {
+                            destaque: '- **Rotação de culturas**',
+                            resposta: '- alterna o plantio de leguminosas com o de não-leguminosas'
+                          },
+                          {
+                            destaque: '- **Adubação verde**',
+                            resposta: '- cultivo de plantas leguminosas que serão decompostas'
+                          },
+                          {
+                            destaque: '- **Consórcio de culturas**',
+                            resposta: '- plantio, ao mesmo tempo e área, de leguminosas e de não-leguminosas'
+                          }
+                        ]
+                      }
+                    ]
+                  }]
+            }
         }
     },
     matematica: {
@@ -195,8 +600,53 @@ let Dados = {
                         pergunta: "O que é um triângulo?",
                         resposta: "Figura com 3 lados"
                     }, ]
-                }, ]
+                }, ],
+                loading: true
             },
+            progressões: {
+                nome: "Progressões",
+                id: 2,
+                gif: "https://data.whicdn.com/images/201185999/original.gif",
+                perguntas: [{
+                    topico: ' Progressão Aritmética',
+                    perguntas: [
+                      {
+                        pergunta: '- Em uma progressão aritmética de **razão $r$** e **primeiro termo** $a_1$, quais são os os **4 primeiros** termos da sequência?',
+                        math: '\\large{a_1, \\;\\; a_1 + r,\\;\\; a_1 + 2r, \\;\\; a_1 + 3r}'
+                      },
+                      {
+                        pergunta: '- Qual a fórmula do **TERMO GERAL**?',
+                        math: '\\large{\\bold\\blue{a_n} = a_1 + (n-1)\\cdot r}'
+                      },
+                      {
+                        pergunta: '- Qual a fórmula da **SOMA**?',
+                        math: '\\large{\\bold\\blue{S_n} = \\frac{(a_1 + a_n) \\cdot n}{2}}'
+                      }
+                    ]
+                  }, {
+                    topico: ' Progressão Geométrica',
+                    perguntas: [
+                      {
+                        pergunta: '- Em uma progressão geométrica de **razão $q$** e **primeiro termo** $a_1$, quais são os os **4 primeiros** termos da sequência?',
+                        math: '\\large{a_1, \\;\\; a_1 \\cdot q,\\;\\; a_1 \\cdot q^2, \\;\\; a_1 \\cdot q^3}'
+                      },
+                      {
+                        pergunta: '- **TERMO GERAL**',
+                        math: '\\bold\\blue{a_n} = a_1 \\cdot q^{n-1}'
+                      },
+                      {
+                        pergunta: '- **SOMA**',
+                        resposta: '- Para $q geq 1$',
+                        math: `\\bold\\blue{S_n} = \\frac{a_1 \\cdot (q^{n}-1)}{q-1}`
+                      },
+                      {
+                        pergunta: '- **SOMA INFINITA**',
+                        resposta: 'Usada quando $0 le q le 1$',
+                        math: " \\bold\\blue{S_{infin}} = \\frac{a_1}{1-q}"
+                      }
+                    ]
+                  }]
+            }
         }
     },
     fisica: {
@@ -297,19 +747,41 @@ let Dados = {
                 id: 1,
                 gif: "https://files.bastter.com/outros/6745f643-94e6-49b3-9eb1-8b59616741c1.gif",
                 perguntas: [{
-                    topico: "Principais blocos",
-                    perguntas: [{
-                            pergunta: "Quais são as fases de blocos econômicos?",
-                            resposta: "Zona de livre comércio, união aduaneira, mercado comum e união monetária"
-                        },
-                        {
-                            pergunta: "Do que se trata a Zona de Livre Comércio? Cite um exemplo!",
-                            resposta: "- Livre circulação de mercadoria e bens (menor taxa de importação e investimento); ex:UMSCA"
-                        },
+                    topico: 'Principais blocos',
+                    perguntas: [
+                      {
+                        pergunta: '- Quais são as *fases de blocos econômicos? e exemplos?*',
+                        resposta: '',
+                        nestedQuestions: 
+                          [
+                            {
+                              destaque: '- **ZONA DE LIVRE COMÉRCIO**',
+                              resposta: '- Livre circulação de mercadoria e bens ( menor taxa de importação e investimento) - ex:UMSCA'
+                            },
+                            {
+                                destaque: '- **UNIÃO ADUANEIRA**',
+                              resposta: '- **Tarifa Externa Comum**: se um membro define tarifa com um país, todos pagam o mesmo - ex: Mercosul'
+                            },
+                            {
+                                destaque: '- **MERCADO COMUM**',
+                              resposta: '- Livre circulação de pessoas e de serviços'
+                            },
+                            {
+                              destaque: '- **UNIÃO MONETÁRIA**/ **ECONÔMICA**',
+                              resposta: '- Moeda única - ex: União europeia a partir do T. de Maastrich'
+                            }
+                          ]
+                        
+                      },
+                      {
+                        pergunta: '- Como funcionam as fases?',
+                        resposta: '- Elas adicionam-se, ou seja, uma fase implica na permanência dos critérios das anteriores.'
+                      }
                     ]
-                }, ]
+                  }, ]
             },
             globalizacao: {
+                loading: true,
                 nome: "Globalização",
                 id: 2,
                 gif: "https://www.mckinsey.com/~/media/McKinsey/Email/Shortlist/52/hero.jpg",
@@ -320,6 +792,139 @@ let Dados = {
                         resposta: "A globalização é um processo de integração social, econômica e cultural entre as diferentes regiões do planeta."
                     }, ]
                 }, ]
+            }, 
+            orientemedio: {
+                nome: "Oriente Médio",
+                id: 3,
+                gif: "https://i.gifer.com/ARqA.gif",
+                perguntas: [{
+                    topico: ' Conceitos gerais',
+                    perguntas: [
+                      {
+                        pergunta: '- Qual o recurso mais importante do Oriente Médio?',
+                        resposta: '- Petróleo'
+                      },
+                      {
+                        pergunta: '- O que é o povo Curdo?',
+                        imagemResposta:"https://s3.us-west-2.amazonaws.com/secure.notion-static.com/0df888e7-957f-4f4a-a043-f8a7a4d0eaf4/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210219%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210219T233233Z&X-Amz-Expires=86400&X-Amz-Signature=6e93ee7f30799610d0b33349047df31033bc03c15120c4ae2c9575231e5e916e&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22",
+                        resposta: '- É o maior povo sem território do mundo, desejando a criação do Curdistão nas regiões da Turquia, Iraque, Síria e Irã'
+                      },
+                      {
+                        pergunta: '- O que são os kibuts judeus?',
+                        resposta: '- Criados em 1910 na sociedade israelense, os kibutz são agrupamentos em que funcionam comunidades com as seguintes características: atividades agrícolas, propriedades coletivas, igualdade social, meios de produção próprios, distribuição da produção para a comunidade e prioridade à educação das crianças.'
+                      }
+                    ]
+                  },{
+                    topico: ' Questão Palestina',
+                    perguntas: [
+                      {
+                        pergunta: '- Justificativa dos hebreus (judeus) para posse da terra?',
+                        resposta: '- Segundo sua religião, eles já ocupavam o território'
+                      },
+                      {
+                        pergunta: '- O que foi o movimento sionista?',
+                        resposta: '- Foi um movimento que buscava criar um território para os judeus, futuramente ISRAEL'
+                      },
+                      {
+                        pergunta: '- Como foi a divisão territorial prevista pela ONU?',
+                        resposta: '- Divisão semelhante de territórios para os árabes e para os judeus',
+                        imagemResposta: "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/5b6ba0d1-0845-4887-8b99-d38078852c8b/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210219%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210219T233207Z&X-Amz-Expires=86400&X-Amz-Signature=79637226213a11cfea5a339576f5d6d18288da94618a48c247442cdac197f908&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22"
+                      },
+                      {
+                        pergunta: '- **Guerra de formação de Israel (1947)**',
+                        resposta: '- Judeus x Árabes, judeus vencem e formam Israel - ISRAEL VENCE'
+                      },
+                      {
+                        pergunta: '- **Guerra de Suez (1956)**',
+                        resposta: '- Nacionalista do Egito assume o poder e nacionaliza o canal de Suez, mandando tropas para a fronteira de Israel - ISRAEL VENCE'
+                      },
+                      {
+                        pergunta: '- **Guerra dos Seis Dias (1967)**',
+                        resposta: '- Foi a que ocasionou a maior alteração de fronteiras - Justificado por Israel como um ataque preventivo, por causa de dados de inteligência - Colinas de Golã, Cisjordânia, Faixa de Gaza, Peninsula do Sinai e Jeusalém passam a integrar o território israelense - ISRAEL VENCE'
+                      },
+                      {
+                        pergunta: '- **Guerra do Yom Kippur (1973)**',
+                        resposta: '- Ataque árabe a Israel no feriado de Yom Kippur, esperando que as defesas estivessem fracas - Apoio declarado dos EUA - ISRAEL VENCE - Por causa da derrota, árabes nacionalizam todas os poços de petróleo, ocasionando a CRISE DO PETRÓLEO'
+                      },
+                      {
+                        pergunta: '- **Acordo de Camp David (1978)**',
+                        resposta: '- paz entre Egito e Israel, com devolvimento da península do Sinai para os egípsios'
+                      },
+                      {
+                        pergunta: '- **Acordo de Oslo (1993)**',
+                        resposta: '- FRACASSADO! - Tentativa de tratado de paz entre Israel e OLP (Organização Palestina) - Após assumir um partido radical na Palestina, o tratado é revogado'
+                      },
+                      { pergunta: '- Como estão os territórios hoje?', resposta: '',
+                    imagemResposta: "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/684ca9fc-ec33-459c-8234-b48b3c1e796c/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210219%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210219T233044Z&X-Amz-Expires=86400&X-Amz-Signature=1d68cee5fade527b21f2c5f05caf6636ed113d199c42edaa951b3792c3c25547&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22" }
+                    ]
+                  }]
+            },
+            mineração: {
+                nome: "Mineração",
+                id: 4,
+                gif: "https://i.gifer.com/GiaJ.gif",
+                perguntas: [{
+                    topico: 'Locais e importância',
+                    perguntas: [
+                      {
+                        pergunta: '- Quais são os **3 principais minérios abundantes** no território brasileiro**?**',
+                        resposta: '- Ferro, manganês, bauxita'
+                      },
+                      {
+                        pergunta: '- Quais minérios apresentam **deficiência** no Brasil**?**',
+                        resposta: '- Chumbo, prata, platina, carvão, gás natural'
+                      },
+                      {
+                        pergunta: '- Por que **importamos carvão?**',
+                        resposta: '- É encontrado em áreas limitadas do território e possui baixa qualidade de aproveitamento nas siderúrgicas'
+                      },
+                      {
+                        pergunta: '- Qual região do país se destaca nas **reservas de carvão**?',
+                        resposta: '- O Sul do país, principalmente RS'
+                      },
+                      {
+                        pergunta: '- Quais os 5 principais **projetos minerais** do Brasil?',
+                        resposta: 'Os abaixo:',
+                        description: `Quais os seus minérios e localizações?`,
+                        nestedQuestions: [
+                          {
+                            destaque: '- **Quadrilátero Ferrífero**',
+                            resposta: '- MG → Ferro'
+                          },
+                          {
+                            destaque: '- **Projeto Grande Carajás**',
+                            resposta: '- PA → Ferro, Manganês e Cobre'
+                          },
+                          {
+                            destaque: '- **Maciço do Urucum**',
+                            resposta: '- MS → Ferro e Manganês'
+                          },
+                          {
+                            destaque: '- **Serra do Navio**',
+                            resposta: '- AP → Manganês'
+                          },
+                          {
+                            destaque: '- **Vale do Rio Trombetas**',
+                            resposta: '- PA → Bauxita'
+                          },
+                          {
+                              destaque: 'resumo',
+                              imagemResposta: "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/77f9c352-fda4-4fb1-b1a3-96af4d6ebfb9/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210219%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210219T233849Z&X-Amz-Expires=86400&X-Amz-Signature=01db50db18e6739892c70df6de5194e96c9dbbffa5b662cd0eb929f16638d80a&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22"
+                          }
+                        ]
+                      },
+                      {
+                        pergunta: '- **OBS:** Quais os minérios constituíntes do **aço**?',
+                        resposta: '- Ferro e manganês',
+                        obs: true
+                      },
+                      {
+                        pergunta: '- **OBS**: Qual critério possibilita **medir a qualidade do carvão**?',
+                        resposta: '- Observa-se o teor de carbono, quanto maior, melhor poder calorífico',
+                        obs: true
+                      }
+                    ]
+                  }]
             }
         }
     },
@@ -327,23 +932,150 @@ let Dados = {
         nome: "Literatura",
         id: 5,
         temas: {
-            trovadorismo: {
-                nome: "Trovadorismo",
+            trovadorismohumanismo: {
+                nome: "Trovadorismo + Humanismo",
                 id: 1,
                 gif: "https://static.wixstatic.com/media/a1dc11_f9c3f1242b0f470f8703ed41beab2f80.gif",
                 perguntas: [{
-                    topico: "Não Sei",
+                    topico: "Trovadorismo",
                     perguntas: [{
-                        pergunta: "Qual o tipo de verso mais comum?",
-                        resposta: "Redondilhas"
-                    }, ]
+                        pergunta: "Qual o *contexto* do Trovadorismo?",
+                        resposta: `- Baixa idade média → teocentrismo 
+                        - Decadência feudal 
+                        - Época dos trovadores 
+                        - Estilo gótico` 
+                    }, {
+                        pergunta: "Quais as *principais características* do trovadorismo?",
+                        resposta: `- Vassalagem amorosa 
+                        - Música e poesia 
+                        - Português galego`
+                    }, {
+                        pergunta: "Quais são os tipos de *cantigas líricas*?",
+                        resposta: "De amor e de amigo",
+                        nestedQuestions: [{
+                            pergunta: "Quais as características da <span class='bold'>de amor?</span>",
+                            resposta: `- **Eu-lírico masculino** :vassalo-trovador
+                            - Apaixonado pela **mulher superior, idealizada e deusificada**
+                            - Ambiente **castelar**
+                            - **Coito**: sofrimento amoroso
+                            - linguagem rebuscada`
+                        },{
+                            pergunta: "Quais as características da **de amigo?**",
+                            resposta: `- **Eu-lírico feminino**: camponesa que sente falta do amigo (foi pras cruzadas)
+                            - Ambiente **rupestre**: rio tejo, mar
+                            - **Saudade**
+                            - **Linguagem simples**`
+                        }]
+                    }, {
+                        pergunta: "Quais são os tipos de *cantigas satíricas*?",
+                        resposta: "De escárnio e de maldizer",
+                        nestedQuestions: [{
+                            pergunta: "Quais são as características das de **escárnio**?",
+                            resposta: "- criticas a sociedade da época, mas não cita o nome da criticado"
+                        }, {
+                            pergunta: "Quais são as características das de **maldizer**?",
+                            resposta: `- criticas a sociedade da época e cita o nome do criticado
+                            - fescenina/ erótica`
+                        }]
+                    }]
                 }, {
-                    topico: "topico 2",
+                    topico: "Humanismo",
                     perguntas: [{
-                        pergunta: "Pergunta 2",
-                        resposta: "Redondilhas"
-                    }, ]
+                        pergunta: `Qual o **contexto** do Humanismo?`,
+                        resposta: `- Mudança de pensamento **teológico para antropocêntrico**
+                        - Invenção da imprensa
+                        - Portugal como **império de navegações**`,
+                    }, {
+                        pergunta: `Quais as principais **características** do Humanismo?`,
+                        resposta: `- Postura erudita → homem racional e livresco
+                        - Retomam obras da antiguidade: egito, **grécia** e **roma** → embrião do renascimento`
+                    },{
+                        pergunta: `Quais são os três **estilos** de Gil Vicente?`,
+                        resposta: `Popular, satírico e medieval`,
+                        description: `Descreva cada um desses estilos`,
+                        nestedQuestions: [{
+                            destaque: "POPULAR",
+                            resposta: `- Usa **linguagem simples, engraçada e chula**
+                            - defende **camponeses**`
+                        }, {
+                            destaque: "SATÍRICO",
+                            resposta: `- **Denúncia os vícios da sociedade**
+                            - 7 pecados capitais
+                            - Isso é o que o inclui como humanista`
+                        }, {
+                            destaque: "MEDIEVAL",
+                            resposta: `- Tosco, rudimentar
+                            - Considera apenas a **ação** da peça, sem levar em conta o cenário e tempo`
+                        }]
+                    },{
+                        pergunta: `Quais são os **subgêneros** usados pelo Gil Vicente?`,
+                        resposta: `- **AUTO**: tom moralizante religioso
+                        - **FARSA**: críticas sociais com tom satírico`
+                    },{
+                        pergunta: `Quais os **tipos de personagens** do Gil Vicente?`,
+                        resposta: `- **ALEGORIAS**: representam ideias, ex: bem e mal
+                        - **TIPOS**: representam esteriótipos de grupos sociais e seus vícios sem profundidade psicológica`
+                    },{
+                        pergunta: `Quais **tipos de linguagem** o Gil Vicente usa?`,
+                        resposta: `- **POPULAR**: coloquial
+                        - **MISTA**: não uniformizado em português ( mistura latim, castelhano...)
+                        - **POÉTICA**: manipula a forma → verbos redondilhos em medidas velhas (5/7)`
+                    },{
+                        pergunta: `Quais as **classificações** de suas peças?`,
+                        resposta: `- **Narrativa**: começo, meio e fim
+                        - **Alegórica**: cenas independentes`,
+                        obs: true
+                    },]
                 }, ]
+            },
+            classicismo: {
+                nome: "Classicismo",
+                id: 2,
+                gif: "https://i.pinimg.com/originals/d0/83/bf/d083bf4dd342ce0805aa3239d063a882.gif",
+                perguntas: [{
+                    topico: "Contexto e características",
+                    perguntas: [{
+                        pergunta: `Qual o *contexto* do Classicismo?`,
+                        resposta: `- **Renascimento** cultural → **antropocentrismo**
+                        - **Grandes navegações** → colônias`,
+                    },{
+                        pergunta: `- Quais as *principais características* do Classicismo?`,
+                        resposta: `- **Universalismo** (temas universais)
+                        - **Racionalismo** ( razão explicando emoção)
+                        - **Paganismo** ( volta a cultura **Greco-Romana)**
+                        - **Neoplatonismo** ( Sensível x Inteligível )`,
+                        nestedQuestions: [{
+                            pergunta: `O que é o *amor neoplatônico*?`,
+                            resposta: `Aquele que não se concretiza`, 
+                            obs: true
+                        }]
+                    },{
+                        pergunta: `- Qual as *formas* usadas no Classicismo?`,
+                        resposta: `- Medidas Novas/ "Dulce still nuevo" → valorização da forma
+                        - **SONETOS (4433)**
+                        - **DECASSÍLABOS** ( 10 sílabas métricas )`,
+                    },]
+                }, {
+                    topico: "Camões",
+                    perguntas: [{
+                        pergunta: `- Quais as características do *Camões Lírico*?`,
+                        resposta: `- Explicação racional de sentimentos
+                        - Neoplatonismo amoroso (mulher idealizada e inalçancável)
+                        - Desconcerto de mundo
+                        - Existencialismo filosófico`,
+                    },{
+                        pergunta: `- Qual a principal obra do *Camões Épico*?`,
+                        resposta: `- Os Lusíadas, uma epopéia ufanista sobre a navegação do Vasco da Gama.`,
+                    },{
+                        pergunta: `- O que o *velho do restelo* significa nos Lusíadas?`,
+                        resposta: `- O velho critica a viagem, perguntando se valeu a pena realmente perder tantas vidas pela navegação`,
+                        obs: true
+                    },{
+                        pergunta: `- O que significa a *máquina do mundo* do *canto X* dos Lusíadas?`,
+                        resposta: `- A máquina do mundo é um modelo de formação do universo, por explicação mitológica, religiosa ou científica → nesse caso, camões defende o **geocentrismo**`,
+                        obs: true
+                    },]
+                }]
             }
         }
     },
@@ -352,25 +1084,146 @@ let Dados = {
         id: 6,
         temas: {
             eletroquimica: {
+
                 nome: "Eletroquímica",
                 id: 1,
                 gif: "https://media2.giphy.com/media/l0MYD0wjKQ84goG6A/giphy.gif",
                 perguntas: [{
-                    topico: "Pilha",
-                    perguntas: [{
-                            pergunta: "A pilha é uma reação forçada ou espontânea?",
-                            resposta: "Espontânea"
-                        },
-                        {
-                            pergunta: "Foto da pilha teste",
-                            resposta: "resposta",
-                            imagemPergunta: "https://media.istockphoto.com/vectors/vector-illustration-of-batteries-vector-id986154016?k=6&m=986154016&s=612x612&w=0&h=Ok4svKDSLA523nLNCwekp1UkUMtEyVv0QIPCbx22qxo=",
-                            imagemResposta: "https://i.pinimg.com/originals/3a/d8/25/3ad825fa000c3a6c7037e981472d4b1a.gif"
-                        },
-                    ]
-                }, ]
+                  topico: ' Pilha',
+                  perguntas: [
+                    { pergunta: '- É um **processo** espontâneo?', resposta: 'Sim' },
+                    {
+                      pergunta: '- Qual **transformação** a pilha faz?',
+                      resposta: '**R:** Transforma **energia química em elétrica**'
+                    },
+                    {
+                      pergunta: '- O **ânodo** representa qual **polo**?',
+                      resposta: '**R:** O polo **negativo**'
+                    },
+                    {
+                      pergunta: '- O **cátodo** representa qual **polo**?',
+                      resposta: '**R:** Polo **positivo**'
+                    },
+                    {
+                      pergunta: '- Em qual **eletrodo** ocorre a **oxidação**?',
+                      resposta: '**R:** Ânodo'
+                    },
+                    {
+                      pergunta: '- Em qual **eletrodo** ocorre a **redução**?',
+                      resposta: '**R:** Cátodo'
+                    },
+                    {
+                      pergunta: '- O que o **cátodo sofre**?',
+                      resposta: '**R:** Sofre deposição (aumento de massa)'
+                    },
+                    {
+                      pergunta: '- O que o **ânodo sofre**?',
+                      resposta: '**R:** Sofre desgaste (corrosão)'
+                    },
+                    {
+                      pergunta: '- Qual eletrodo **recebe e´**?',
+                      resposta: '**R:** Cátodo'
+                    },
+                    {
+                      pergunta: '- Qual eletrodo **perde e´**?',
+                      resposta: '**R:** Ânodo'
+                    },
+                    {
+                      pergunta: '- Qual o **sentido do fluxo de elétrons**?',
+                      resposta: '**R:** Sempre vão no sentido do **ânodo → cátodo** (do menor para o maior Ered)'
+                    },
+                    {
+                      pergunta: '- Qual o **sentido da corrente elétrica**?',
+                      resposta: '**R:** Sempre o **oposto do sentido do fluxo de e´**, portanto do **cátodo → ânodo**'
+                    },
+                    {
+                      pergunta: '- Qual a ordem da **notação da pilha**?',
+                      resposta: '**R:** Ânodo**//**Cátodo'
+                    },
+                    {
+                      pergunta: '- Para que serve a **ponte salina?**',
+                      resposta: '**R:** Sua função é **permitir a passagem parcial de excesso de íons** para manter a neutralidade elétrica das soluções'
+                    }
+                  ]
+                },{
+                  topico: 'Conceitos de Eletrólise',
+                  perguntas: [
+                    {
+                      pergunta: '- É um **processo** **espontâneo**?',
+                      resposta: '**R:** **Não**'
+                    },
+                    {
+                      pergunta: '- Qual transformação faz?',
+                      resposta: '**R:** Transforma **energia elétrica em química**'
+                    },
+                    {
+                      pergunta: '- O **ânodo** representa qual **polo**?',
+                      resposta: '**R:** Polo **positivo**'
+                    },
+                    {
+                      pergunta: '- O **cátodo** representa qual **polo**?',
+                      resposta: '**R:** Polo **negativo**'
+                    },
+                    {
+                      pergunta: '- Em qual **eletrodo** ocorre a **oxidação**?',
+                      resposta: '**R:** Ânodo'
+                    },
+                    {
+                      pergunta: '- Em qual **eletrodo** ocorre a **redução**?',
+                      resposta: '**R:** Cátodo'
+                    },
+                    {
+                      pergunta: '- Qual característica dos **eletrodos**?',
+                      resposta: '**R:** São inertes'
+                    },
+                    {
+                      pergunta: '- Qual é o objetivo dos **íons** na eletrólise?',
+                      resposta: '**R:** Tanto o cátion quanto o ânion **querem descarregar**'
+                    }
+                  ]
+                },{
+                  topico: ' Eletrólise ígnea',
+                  perguntas: [
+                    { pergunta: '- Qual **principal característica**?', resposta: '' },
+                    {
+                      pergunta: '- OBS: qual o interesse/aplicação ao realizá-la?',
+                      resposta: '**R:** Obter metais puros a partir de seus minérios',
+                      obs: true
+                    }
+                  ]
+                },{
+                  topico: ' Eletrólise aquosa',
+                  perguntas: [
+                    {
+                      pergunta: '- Qual **principal característica**?',
+                      resposta: '**R:** Eletrólito **em solução aquosa**'
+                    },
+                    {
+                      pergunta: '- OBS: qual o interesse/aplicação ao realizá-la?',
+                      resposta: '**R:** Fazer revestimentos metálicos → **Galvanoplastia**',
+                      obs: true
+                    },
+                    {
+                      pergunta: '- Qual a **equação de redução da água**?',
+                      resposta: '- Quando o H+ descarregar ↳ 2H2O (L) +2e´ → H2 (G) + 2OH-'
+                    },
+                    {
+                      pergunta: '- Qual a **equação de oxidação da água**?',
+                      resposta: '- Quando o OH- descarregar ↳ H20 (L) → 2H+ (AQ) +1/2O2 (G) +2e'
+                    },
+                    {
+                      pergunta: '- Qual a fila de preferência de **descarga de ânions**?',
+                      resposta: '- Ânions oxigenados < OH- < Demais ânions'
+                    },
+                    {
+                      pergunta: '- Qual a fila de preferência de **descarga de cátions**?',
+                      resposta: '- 1A, 2A, Al3+ **<** **H+ <** Outros cátions'
+                    }
+                  ]
+                } ]
             },
             radioatividade: {
+              loading: true,
                 nome: "Radioatividade",
                 id: 2,
                 gif: "https://media2.giphy.com/media/l2Je7a6s6zNKXPD1e/giphy.gif",
@@ -385,6 +1238,131 @@ let Dados = {
                         }
                     ]
                 }]
+            },
+            polimeros: {
+                nome: "Polimeros",
+                id: 3,
+                gif: "https://thumbs.gfycat.com/ZanyKindlyDiplodocus-size_restricted.gif",
+                perguntas: [{
+                    topico: 'Características e reações',
+                    perguntas: [
+                      {
+                        pergunta: '- O que são **polímeros**?',
+                        resposta: '- Macromoléculas formadas a partir da reação de polimerização dos seus respectivos monômeros'
+                      },
+                      {
+                        pergunta: '- Nos polímeros de **adição**, qual a **característica obrigatória** nos monômeros?',
+                        resposta: '- Presença de insaturação'
+                      },
+                      {
+                        pergunta: '- Como os **polímeros de condensação** são caracterizados? Cite os **dois** tipos',
+                        resposta: '- Formados, geralmentes, pela reação entre **dois monômeros diferentes**, com a eliminição de moléculas pequenas, como água',
+                        nestedQuestions: [
+                          {
+                            pergunta: '- **POLIÉSTERES**',
+                            resposta: '- **Monômeros**: possuem dois ácidos carboxilicos, um de cada lado + um diálcool - **Polímeros**: são cadeias com vários ésteres ligando-as'
+                          },
+                          {
+                            pergunta: '- **PÓLIAMIDAS**',
+                            resposta: '- **Monômeros**: possuem dois ácidos carboxilicos, um de cada lado + uma diamina - **Polímeros**: são cadeias com várias amidas ligando-as'
+                          }
+                        ]
+                      },
+                      {
+                        pergunta: '- **OBS**: Qual o nome da **borracha natural**? Em que categoria ela se encaixa?',
+                        resposta: '- ISOPRENO (elastômero → propriedades elásticas)',
+                        obs: true
+                      },
+                      {
+                        pergunta: '- **OBS**: Caracterize o processo de **vulcanização** de borracha',
+                        resposta: '- Criação de pontes de enxofre entre as cadeias carbonicas - Deixa a borracha mais dura e resistente (pneu)',
+                        obs: true
+                      },
+                      {
+                        pergunta: '- **OBS**: Qual a característica da cadeia dos **polímeros condutores**?',
+                        resposta: '- A cadeia tem duplas conjugadas',
+                        obs: true
+                      }
+                    ]
+                  }]
+            },
+            ligaçõesintermoleculares: {
+                nome: "Ligações Intermoleculares",
+                id: 4,
+                gif: "https://i.pinimg.com/originals/b6/fb/9f/b6fb9f87a15aea2c968b3c28cd6efb2f.gif",
+                perguntas: [{
+                    topico: ' Forças intermoleculares',
+                    perguntas: [
+                      {
+                        pergunta: '- Qual a **ordem de força (decrescente)** de interações intermoleculares?',
+                        resposta: '- **Lig. iônica** > **íon-dipolo** > **forças intermoleculares**'
+                      },
+                      {
+                        pergunta: '- Dentro das forças intermoleculares, quais a ordem de força em **ordem decrescente**',
+                        resposta: '- **Ponte de hidrogênio** → **dipolo-dipolo** → **dipolo induzido**',
+                        description:"Explique quando acontece cada uma!",
+                        nestedQuestions: [
+                          {
+                            destaque: '- **PONTE DE HIDROGÊNIO**',
+                            resposta: '- F, O ou N ligados à H'
+                          },
+                          {
+                            destaque: '- **DIPOLO-DIPOLO**',
+                            resposta: '- Molécula polar x molécula polar'
+                          },
+                          {
+                            destaque: '- **DIPOLO INDUZIDO**',
+                            resposta: '- Molécula apolar x molécula apolar - Obs: Forças de London ou Van der Walls'
+                          }
+                        ]
+                      }
+                    ]
+                  },{
+                    topico: ' Exemplos',
+                    perguntas: [
+                      {
+                        pergunta: '- Para cada um dos casos abaixos dê o caso de interação intermolecular',
+                        resposta: '',
+                        nestedQuestions: [
+                          { destaque: '- **ÁGUA COM SAL**', resposta: '- Íon-dipolo' },
+                          {
+                            destaque: '- **SAL DE COZINHA**',
+                            resposta: '- Ligação iônica'
+                          },
+                          {
+                            destaque: '- **ÁCIDO FLUORÍDRICO**',
+                            resposta: '- HF → Ponte de hidrogênio'
+                          },
+                          {
+                            destaque: '- **ÁCIDO CLORÍDRICO**',
+                            resposta: '- HCl → dipolo-dipolo'
+                          },
+                          {
+                            destaque: '- **ÁGUA**',
+                            resposta: '- H2O → Ponte de hidrogênio'
+                          },
+                          {
+                            destaque: '- **GÁS OXIGÊNIO**',
+                            resposta: '- O2 → Dipolo induzido'
+                          },
+                          {
+                            destaque: '- **HEXANO**',
+                            resposta: '- C6H8 → Dipolo induzido'
+                          },
+                          { destaque: '- **ETANOL**', resposta: '- Ponte de hidrogênio' },
+                          {
+                            destaque: '- **METÓXI-METANO**',
+                            resposta: '- Dipolo-dipolo'
+                          },
+                          { destaque: '- **CETONA**', resposta: '- Dipolo-dipolo' },
+                          {
+                            destaque: '- **CETONA E ÁGUA**',
+                            resposta: '- Ponte de hidrogênio'
+                          }
+                        ]
+                      }
+                    ]
+                  }]
             }
         }
     },
@@ -403,6 +1381,80 @@ let Dados = {
                         resposta: "Visível e com apenas um núcleo"
                     }, ]
                 }, ]
+            },
+            pontuação: {
+                nome: "Pontuação",
+                id: 2,
+                gif: "https://media1.tenor.com/images/3857d7a491decccf27802e35a6f2e74f/tenor.gif?itemid=16237337",
+                perguntas: [{
+                    topico: ' Vírgulas',
+                    perguntas: [
+                      {
+                        pergunta: '- Quais os casos que usamos vírgulas *dentro de orações*?',
+                        resposta: '',
+                        nestedQuestions: [
+                          {
+                            pergunta: '- Isolar elementos deslocados da ordem **S+V+C**',
+                            resposta: '- "*Amanhã, o tempo estará limpo"* - Obs: adjuntos adverbias curtos ( 1 ou 2 palavras) tem uso de vírgula opcional'
+                          },
+                          {
+                            pergunta: '- Separar temos da **mesma função sintática**',
+                            resposta: '- "*Chamei meu pai, minha mãe e meu irmão*"'
+                          },
+                          {
+                            pergunta: '- Isolar **aposto e vocativo**',
+                            resposta: '- "*Pessoal, o Vlad, professor de história, vai se atrasar"*'
+                          },
+                          {
+                            pergunta: '- Marcar **elipse de verbo**',
+                            resposta: '- "*Eu estudo português, Julia, física"*'
+                          }
+                        ]
+                      },
+                      {
+                        pergunta: '- Quais os casos que usamos vírgulas *entre orações?*',
+                        resposta: '',
+                        nestedQuestions: [
+                          {
+                            pergunta: '- Separar **orações coordenadas**',
+                            resposta: '- "*Eu queria ir na festa, mas preferi ficar em casa"* - Exceção: **orações de mesmo sujeito e conjunção "e"** - "*Eu queria comer e comprar uma blusa* "'
+                          },
+                          {
+                            pergunta: '- Separar **orações subordinadas**',
+                            resposta: '- **Substantiva** - Não ocorre separação - Exceção: apositiva → com 2 pontos: "*só quero uma coisa: que você se acalme"* - **Adjetiva** - **Restritiva** - Sem vírgula: "*os indivíduos que apoiaram o presidente comemoraram o fato"* - **Explicativa** - Com uso de vírgulas: "O*s indivíduos, que apoiaram o presidente, comemoraram o fato"* - **Adverbial** - Isola oração subordinada: "*Mal entrei na estrada, meu pneu furou"*'
+                          }
+                        ]
+                      }
+                    ]
+                  },{
+                    topico: ' Outros',
+                    perguntas: [
+                      {
+                        pergunta: '- Qual a função dos *dois pontos*',
+                        resposta: '- **Explicação** - ex: "*Não ande por ruas escuras: pode ter assaltos"*'
+                      },
+                      {
+                        pergunta: '- Qual a função das *reticências*?',
+                        resposta: '- Supressão de uma frase - I**mplícito**: "*Eu estudei muito, mas..."*'
+                      },
+                      {
+                        pergunta: '- Qual a função das *aspas*?',
+                        resposta: "",
+                        nestedQuestions: [
+                          { destaque: '- **citação**', resposta: '- *Ele disse: "..."*' },
+                          {
+                            destaque: '- **gírias, estrangeirismo, variantes**',
+                            resposta: '- *Ele é um "playboy"*'
+                          },
+                          { destaque: '- **ironia**', resposta: '- *Ele é "lindo"*' },
+                          {
+                            destaque: '- sentido **metafóricos**',
+                            resposta: '- *Estamos passando por uma "decomposição" da sociedade*'
+                          }
+                        ]
+                      }
+                    ]
+                  }]
             }
         }
     },
@@ -442,12 +1494,141 @@ let Dados = {
                         resposta: "Reverter o tema de Cosmogonia para a Verdade (racionalista)"
                     },{
                         pergunta: "Qual o método socrático?",
-                        resposta: `- Reconhecimento da ignorância (“só sei que nada sei”), <br>
-                        - <span class="bold">Maiêutica:</span> ''parir'' o conhecimento pela dialética socrática <br>
+                        resposta: `- Reconhecimento da ignorância (“só sei que nada sei”), 
+                        - <span class="bold">Maiêutica:</span> ''parir'' o conhecimento pela dialética socrática 
                         
                                 ↳ OBS: composto por exortação (estímulo), indagação, ironia (falsa ignorância), aporia (contradição), racionalidade (lógica)`
                     },]
-                }, ]
+                },{
+                    topico: ' Platão',
+                    perguntas: [
+                      {
+                        pergunta: '- No que consistia a ***Teoria das ideias***?',
+                        resposta: '- Realidade dividido em dois planos: *inteligível e sensível*. - *Mundo das ideias como causa do mundo das coisas* → tudo o que existe no plano sensível é uma reprodução imperfeita de uma ideia universal do mundo inteligível. - Existência, no mundo inteligível, de *formas perfeitas belas e imutáveis* (conhecimento) → a *essência* metafísica, alma imortal perfeita. - O *mundo das coisas é imperfeito e mutável* (sofismo) → a *aparência*, o não-ser'
+                      },
+                      {
+                        pergunta: '- O que era a ***Alegoria da Caverna***?',
+                        resposta: '- Homens que estariam *acorrentados* no fundo de uma gruta subterrânea, acorrentados, e só viam *imagens* projetadas na parede. Separados por um muro, eles não conseguiam visualizar o que havia atrás deles. - Um dos prisioneiros *consegue se desfazer* de suas correntes e sai da caverna (subitamente exposto a liberdade), visualiza o mundo da luz/racionalidade fora da caverna e volta para avisar aos seus companheiros sobre a existência de tal mundo. - Essa história termina com a *morte do prisioneiro* (morto por levar o conhecimento aos seus amigos)',
+                        nestedQuestions: [
+                          {
+                            pergunta: '- Qual a *análise* desse teoria?',
+                            resposta: '- sombras da caverna representam a existência de um plano sensível - saída da caverna representa a ida para o plano das ideias'
+                          }
+                        ]
+                      },
+                      {
+                        pergunta: '- Do que tratava a ***Teoria da Reminiscência***?',
+                        resposta: '- *Conhecimento inato*, presente na alma humana. - Conhecer é *lembrar* → dialética da maiêutica'
+                      },
+                      {
+                        pergunta: '- O que Platão pregava em suas *filosofia política* (no livro “A República”)?',
+                        resposta: '- *Educação para todos*, funções baseadas na “vocação” do indivíduo.',
+                        nestedQuestions: [
+                          {
+                            pergunta: '- Qual era a *hierarquia* estabelecida pelos cidadãos?',
+                            resposta: '- De acordo com as *almas* - Bronze < Prata < Ouro : hierarquia social pela educação'
+                          },
+                          {
+                            pergunta: '- Qual a *forma de governo* defendida pelo autor?',
+                            resposta: '- *Sofocracia* governo dos sábios, dos filósofos. (prevalência da razão)'
+                          }
+                        ]
+                      },
+                      {
+                        pergunta: '- Para o filósofo, do que se tratava a ***Arte***?',
+                        resposta: '- Arte como “cópia da cópia” → Mímesis - Ilusão da realidade: o poeta e o pintor são farsantes.'
+                      }
+                    ]
+                  },{
+                    topico: ' Aristóteles',
+                    perguntas: [
+                      {
+                        pergunta: '- Quais os métodos de **racionalização** lógica?',
+                        resposta: '↳ resposta1 ↳ alo2',
+                        nestedQuestions: [
+                          {
+                            pergunta: '- Silogismo dedutivo',
+                            resposta: '- Conexão de ideias, argumentação logicamente perfeita, conclusão racionalmente indiscutível. ↳ 1ª premissa: “Todo homem é mortal” ↳ 2ª premissa: “Sócrates é um homem” ↳ Conclusão: “Logo, Sócrates é mortal”'
+                          },
+                          {
+                            pergunta: '- Indução',
+                            resposta: '- Testes e repetições (maior chance de erros) → Não se pode afirmar a universalidade ↳ 1ª premissa: “Todo cão é mortal.” ↳ 10ª premissa: “Todo gato é mortal.” ↳ 100ª premissa: “Todo peixe é mortal” ↳ Conclusão: “Logo, todo animal é mortal”'
+                          }
+                        ]
+                      },
+                      {
+                        pergunta: '- **Metafísica**',
+                        resposta: '- Crítica ao dualismo ontológico do Platão → “Nada chega à mente sem passar pelos sentidos” ; não há um mundo inteligível, nem inato - Há, porém, uma essência presente nas coisas, uma forma comum que define o que é cada objeto e sem a qual um objeto não seria o que é. → Mundo suprassensível, origem de tudo'
+                      },
+                      {
+                        pergunta: '- **Teoria da Causalidade**: Quais são as causas?',
+                        resposta: `- 1ª causa / 1° motor = motor imóvel (Deus), ato puro;  primeiro criador. <br>↳ *Causa Formal*: “O que é?” <br>↳ *Causa Material*: “Do que é feito?” <br>↳ *Causa Eficiente*: “Quem fez?” <br>↳ *Causa Final*: “Para quê?”`
+                      },
+                      {
+                        pergunta: '- **Teoria do conhecimento** e **oncologia**',
+                        resposta: `- “Tudo se movimenta, passando do ato para potência” (crítica à Parmênides) - Ser em *constante mudança* (ATO ➝ POTÊNCIA ➝ ATO ..........) 
+                        ↳ *Potência*: o que o ser pode vir a se tornar; devir 
+                        ↳ *Ato*: manifestação atual do ser, realização de uma potência`
+                      },
+                      {
+                        pergunta: '- **Ética**',
+                        resposta: '- Discorda de Platão quanto ao caráter inato do bem / virtude. - Virtude deve ser ensinada e aprendida. - Virtuosidade alcançado pela justa medida ( *vícios pela falta* x *vícios pelo excesso* ) - O prêmio da vida virtuosa é a Felicidade ↳ “Dianoética”: capacidades de conhecimento ↳ “Ética”: moral, caráter individual'
+                      },
+                      {
+                        pergunta: '- **Política**',
+                        resposta: '- Homem é um animal inerentemente político → não há humanidade sem sociedade política. - Governo ideal é o exercido pelo homem “virtuoso” - Formas normais (monarquia, aristocracia e democracia) ➝ corrupção ➝ Formas anormais (tirania, oligarquia, demagogia)'
+                      },
+                      {
+                        pergunta: '- **Arte**',
+                        resposta: '- Mímesis como imitação da realidade, porém é poética - Discorda de Platão quanto ao valor negativo da arte - **Catarse**: processo de purificação da alma pelo teatro trágico.'
+                      }
+                    ]
+                  } ]
+            },
+            descartes: {
+                nome: "Descartes",
+                id: 2,
+                gif: "https://thumbs.gfycat.com/PlumpArtisticGangesdolphin-size_restricted.gif",
+                perguntas: [{
+                    topico: 'Filosofia de Descartes',
+                    perguntas: [
+                      {
+                        pergunta: '- Ele era de qual **escola filosófica**? Qual era seu **método**?',
+                        resposta: '- **Ceticismo metodológico**: dúvida de todos os fatos e afirmações - **Racionalismo**: renúncia aos sentidos como fonte de conhecimento.'
+                      },
+                      {
+                        pergunta: '- O que o filósofo concluiu no ***Primeiro Cogito***? Qual a famosa **frase** utilizada?',
+                        resposta: '- Não é possível duvidar do fato de que sou um ser que exercita a dúvida, que pensa - “Penso, logo existo”'
+                      },
+                      {
+                        pergunta: '- O que Descartes conclui sobre a **existência de Deus**?',
+                        resposta: '- A ideia inata de **perfeição**, infinidade e da presença de conceitos matemáticos na mente **comprovaria a existência de Deus**. - Imperfeição humana justificada por ser **parte da totalidade perfeita**'
+                      },
+                      {
+                        pergunta: '- **OBS**: Como ele retrata o **dualismo mente-corpo?**',
+                        resposta: '- Essência humana como substância pensante e inextensa, entidade metafísica, n**ão necessita de um corpo para existir** - Corpo extenso e material',
+                        obs: true
+                      },
+                      {
+                        pergunta: '- **OBS**: Qual eram os **procedimentos** utilizados?',
+                        resposta: `- Ideias claras, ausência de dúvidas
+                        - Divisão do problema em partes menores
+                        - Ordem do simples para o complexo
+                        - Realização de revisões.`,
+                        obs: true
+                      },
+                      {
+                        pergunta: '- **OBS**: O que era a hipótese do **gênio maligno**?',
+                        resposta: '- Deus do mal que manipula a realidade para enganar, para fazer crer na existência do mundo irreal',
+                        obs: true
+                      },
+                      {
+                        pergunta: '- **OBS OBS**: Quem pode utilizar a linguagem?',
+                        resposta: '- Humanos são os únicos que podem, de forma consciente, utilizar a linguagem (diferentemente de máquinas e animais)',
+                        obs: true
+                      }
+                    ]
+                  }]
             }
         }
     },
@@ -456,6 +1637,7 @@ let Dados = {
         id: 9,
         temas: {
             cultura: {
+                loading: true,
                 nome: "Cultura",
                 id: 1,
                 gif: "https://i.makeagif.com/media/4-03-2017/DIGEiJ.gif",
@@ -481,7 +1663,7 @@ let Dados = {
                     topico: "Alianças",
                     perguntas: [{
                             pergunta: "Qual foram os dois agrupamentos militares e quais países faziam parte de cada um?",
-                            resposta: "EIXO: Alemanha, Itália e Japão <br> ALIADOS: URSS, EUA, Inglaterra, França",
+                            resposta: "EIXO: Alemanha, Itália e Japão  ALIADOS: URSS, EUA, Inglaterra, França",
                             imagemResposta: "https://1.bp.blogspot.com/-Br_gosLXecE/ULdHZRclu2I/AAAAAAAAAFQ/T08ws-H--aQ/s1600/Apresenta%C3%A7%C3%A3o1.jpg",
                             nestedQuestions: [{
                                 pergunta: "Em que ano acabou?",
@@ -559,7 +1741,7 @@ let Dados = {
                         resposta: "Passagem do capitalismo comercial para o industrial"
                     }, {
                         pergunta: "Quais as razões para o pioneirismo inglês?",
-                        resposta: "- Burguesia forte após a Revolução Gloriosa <br> - “Cercamentos” liberaram mão-de-obra e matéria-prima <br> - Acúmulo de capital"
+                        resposta: "- Burguesia forte após a Revolução Gloriosa  - “Cercamentos” liberaram mão-de-obra e matéria-prima  - Acúmulo de capital"
                     }, {
                         pergunta: "Por que houve o acúmulo de capital?",
                         resposta: "Tratado de Methuen e comércio marítimo"
@@ -585,8 +1767,8 @@ let Dados = {
                     perguntas: [{
                         pergunta: "Quais foram os <span class='bold'>três</span> tipos de movimentos sociais mais comuns na época?",
                         resposta: `
-                        - <span class='bold'>Trade Unions:</span> prestavam assistência aos trabalhadores (sindicatos) <br>
-                        - <span class='bold'>Ludismo:</span> destruição das maquinas <br>
+                        - <span class='bold'>Trade Unions:</span> prestavam assistência aos trabalhadores (sindicatos) 
+                        - <span class='bold'>Ludismo:</span> destruição das maquinas 
                         - <span class='bold'>Cartismo:</span> reunião de assinaturas na “Carta do Povo” e entrega ao parlamento inglês, exigindo voto secreto e universal`
                     }]
                 }]

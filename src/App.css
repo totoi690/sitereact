@@ -69,8 +69,6 @@ h2 {
 
 .outerFormsDiv {
   background-color: var(--color9);
-  margin-left: -.44vw;
-  margin-right: -.44vw;
   padding-right:15vw;
   padding-left:15vw;
     padding-bottom: 1vw;
@@ -85,12 +83,12 @@ select {
     color: var(--color4);
     line-height: 1.3;
     padding: .2em .4em .2em .4em;
-    width: 13em;
+    width: 17em;
     max-width: 100%; 
     box-sizing: border-box;
     margin: 0;
     margin-left: .2em;
-    border: .1em solid var(--color4);
+    border: .08em solid var(--color4);
     box-shadow: 0 .05em 0 .05em rgba(0,0,0,.04);
     border-radius: .5em;
     -moz-appearance: none;
@@ -208,8 +206,6 @@ button:hover {
 .cardDiv {
   background-color: var(--color9);
   padding: .5vw;
-  margin-left: -.44vw;
-  margin-right: -.44vw;
 }
 
 .navigationDiv {
@@ -218,8 +214,8 @@ button:hover {
   background-color: var(--color6);
   color: var(--color2);
   padding: .3em;
-  margin-left: -.44vw;
-  margin-right: -.44vw;
+  margin-left: -.3em;
+  margin-right: -.3em;
 }
 
 .link {

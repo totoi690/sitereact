@@ -46,6 +46,9 @@ class RenderTopico extends React.Component {
                         topico={element1.topico}
                         nestedQuestions={element1.nestedQuestions}
                         math={element1.math}
+                        description={element1.description}
+                        destaque={element1.destaque}
+                        obs={element1.obs}
                     />
                     )})
         )

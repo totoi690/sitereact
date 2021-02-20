@@ -2,6 +2,7 @@ import React from 'react'
 import { CSSTransition } from "react-transition-group"
 import 'katex/dist/katex.min.css';
 import { BlockMath } from 'react-katex';
+import Translate from "../Funções/translate"
 
 class NestedQuestions extends React.Component {
     constructor() {
@@ -66,17 +67,22 @@ class NestedQuestions extends React.Component {
             
                         <div className="isFlipped">
                             <p>
-                            <b className="per">Pergunta: </b>
-                            <span className="res"><span dangerouslySetInnerHTML={{__html: this.props.object.pergunta}}></span></span>
+                            <b className="per">{ this.props.object.pergunta !== undefined ? "Pergunta:": this.props.object.destaque !== undefined ? Translate(this.props.object.destaque, "d") : null}</b>
+                            <span className="res"><span dangerouslySetInnerHTML={{__html: Translate(this.props.object.pergunta, "p")}}></span></span>
                             {this.props.object.imagemPergunta !== undefined ? <p className="imagemPerguntaDiv"><img className="imagemPergunta" alt="imagem pergunta" src={this.props.object.imagemPergunta}></img></p> : null}
                             </p>
                         </div>
+
+                        { this.props.object.obs ?
+                <div className="obscontainer, isFlipped">
+                    <span className="obs">OBS</span>
+                </div> : null}
                         </> : 
             
                         <div className={this.state.fade ? "" : 'isFlipped'}>
                             <p>
                             <b className="per">Resposta: </b> 
-                            <span className="res"><span dangerouslySetInnerHTML={{__html: this.props.object.resposta}}></span></span>
+                            <span className="res"><span dangerouslySetInnerHTML={{__html: Translate(this.props.object.resposta, "r")}}></span></span>
                             {this.props.object.math !== undefined ? <p className="math"><BlockMath math={String(this.props.object.math)}/></p> : null}
                             {this.props.object.imagemResposta !== undefined ? <p className="imagemRespostaDiv"><img className="imagemResposta" alt="imagem resposta" src={this.props.object.imagemResposta}></img></p> : null}
                             </p> 
