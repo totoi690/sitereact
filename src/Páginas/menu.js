@@ -9,7 +9,6 @@ import { CSSTransition } from "react-transition-group"
 import Navegation from "../Estrutural/navegation"
 import Select from "react-dropdown-select"
 import SearchOptions from "../Funções/searchOptions"
-import Darkmode from 'darkmode-js';
 //import { CloudinaryContext, Image } from "cloudinary-react"
 
 class Menu extends React.Component {
@@ -73,7 +72,7 @@ class Menu extends React.Component {
             </div>
             </CSSTransition>
         </div>
-        {new Darkmode().showWidget()}
+
         <Footer />
         </div>
 )
