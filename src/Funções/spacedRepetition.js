@@ -1,6 +1,6 @@
 import React from 'react'
 import Dados from "../Dados/dados"
-import Card from "../Estrutural/card"
+import CardModel from "../Estrutural/cardModel"
 import "../Páginas/hoje.css"
 
 class SpacedRepetition extends React.Component {
@@ -12,7 +12,7 @@ class SpacedRepetition extends React.Component {
         this.fibonacci = this.fibonacci.bind(this)
     }
 
-    calcularIntervalo = (pontos, cor) => {
+    calcularIntervalo = (pontos, cor, nested) => {
         const PONTOSMULTIPLIER = 3
         const CORMULTIPLIER = {
             vermelho: 0,
@@ -22,8 +22,22 @@ class SpacedRepetition extends React.Component {
             multi: 1.2,
         }
 
+        let contaPontos = () => {
+        if (nested !== undefined) {
+            let ponto = nested.map((el) => {
+                let pnt = el.pontos
+                if (pnt !== undefined && pnt !== 0) {
+                    return pnt
+                }
+            })
+            let soma = ponto.reduce((a,b) => {return a + b})
+            return ((soma + pontos) / (ponto.length + 1))
+        } else return pontos
+    }
+    console.log(contaPontos())
+
         let soma, numCor
-        let numPontos = pontos / PONTOSMULTIPLIER
+        let numPontos = contaPontos() / PONTOSMULTIPLIER
         switch (cor) {
             case this.state.colors.verde: numCor = CORMULTIPLIER.verde; break
             case this.state.colors.amarelo: numCor = CORMULTIPLIER.amarelo; break
@@ -59,7 +73,7 @@ class SpacedRepetition extends React.Component {
                                 if (pergunta.data !== undefined) {
                                 let data = new Date(pergunta.data)
                                 let spacedData = new Date(pergunta.data)
-                                spacedData.setDate(data.getDate() + this.calcularIntervalo(pergunta.pontos, pergunta.cor))
+                                spacedData.setDate(data.getDate() + this.calcularIntervalo(pergunta.pontos, pergunta.cor, pergunta.nestedQuestions))
                                 pergunta.spacedData = spacedData
                                 if (
                                     data >= spacedData
@@ -88,6 +102,7 @@ class SpacedRepetition extends React.Component {
 
 
     render() {
+
         if ( this.fazerArray()[0] !== undefined) {
             let arrayOrdenado = this.fazerArray().sort((a, b) => {
                 return a.temaNome < b.temaNome ? a.materiaNome < b.materiaNome ? a.object.data < b.object.data ? -1 : 0 : 0 : 0
@@ -97,15 +112,8 @@ class SpacedRepetition extends React.Component {
                 let materia = el.materia
                 let tema = el.tema
                 let topico = el.topico
-                let pergunta = el.object.pergunta
-                let resposta = el.object.resposta
-                let imagemPergunta = el.object.imagemPergunta
-                let imagemResposta = el.object.imagemResposta
                 let data = new Date(el.object.data)
                 let index = el.index
-                let nestedQuestions = el.object.nestedQuestions
-                let math = el.object.math
-                let description = el.object.description
                 data.setDate(data.getDate() + this.calcularIntervalo(el.object.pontos, el.object.cor))
                 let dataFormatada = ((data.getDate() )) + "/" + ((data.getMonth() + 1)) + "/" + data.getFullYear();
                 
@@ -115,17 +123,12 @@ class SpacedRepetition extends React.Component {
                                 {dataFormatada}
                                 <span className="right">{el.materiaNome} - {el.temaNome} - {topico}</span>
                             </div>
-                            <Card
+                            <CardModel
+                                handler={this.props.handler}
                                 tema={Dados[materia].temas[tema].perguntas[index]} 
-                                pergunta={pergunta} 
-                                resposta={resposta} 
-                                imagemResposta={imagemResposta}
-                                imagemPergunta={imagemPergunta}  
                                 index={Dados[materia].temas[tema].perguntas[index].perguntas.indexOf(el.object)}
-                                topico={topico}
-                                nestedQuestions={nestedQuestions}
-                                math={math}
-                                description={description}
+                                object={el.object}
+                                nested={false}                      
                             />
                         </div>
                     )

@@ -15,7 +15,7 @@ import Navegation from "../Estrutural/navegation"
 class Perguntas extends React.Component {
     constructor() {
         super()
-        this.state = {selectTema: "sintaxe", selectMateria: "gramática", paraFrente: [], windowScroll: "", animate: true, animatecards: true}
+        this.state = {selectTema: "sintaxe", selectMateria: "gramatica", paraFrente: [], windowScroll: "", animate: true, animatecards: true}
         this.handler = this.handler.bind(this)
         this.selectRandom = this.selectRandom.bind(this)
       }

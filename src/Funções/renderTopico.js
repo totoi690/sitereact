@@ -1,5 +1,5 @@
 import React from 'react'
-import Card from "../Estrutural/card"
+import CardModel from "../Estrutural/cardModel"
 
 class RenderTopico extends React.Component {
     constructor() {
@@ -35,20 +35,12 @@ class RenderTopico extends React.Component {
         return (
             this.props.element.perguntas.map((element1) => {
                 return(
-                    <Card 
+                    <CardModel
                         handler={this.onUpdateItem} 
-                        tema={this.props.tema.perguntas[this.props.index]} 
-                        pergunta={element1.pergunta} 
-                        resposta={element1.resposta} 
-                        imagemResposta={element1.imagemResposta}
-                        imagemPergunta={element1.imagemPergunta}  
+                        tema={this.props.tema} 
                         index={this.props.tema.perguntas[this.props.index].perguntas.indexOf(element1)}
-                        topico={element1.topico}
-                        nestedQuestions={element1.nestedQuestions}
-                        math={element1.math}
-                        description={element1.description}
-                        destaque={element1.destaque}
-                        obs={element1.obs}
+                        object={element1}
+                        nested={false}
                     />
                     )})
         )

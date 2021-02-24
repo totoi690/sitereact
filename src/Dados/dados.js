@@ -122,7 +122,7 @@ let Dados = {
                     ]
                   } ]
             },
-            transpiraçãovegetal: {
+            transpiracaovegetal: {
                 nome: "Transpiração Vegetal",
                 id: 3,
                 gif: "https://media0.giphy.com/media/1iLVjz6PbgRuOOxa/giphy.gif",
@@ -603,7 +603,7 @@ let Dados = {
                 }, ],
                 loading: true
             },
-            progressões: {
+            progressoes: {
                 nome: "Progressões",
                 id: 2,
                 gif: "https://data.whicdn.com/images/201185999/original.gif",
@@ -859,7 +859,7 @@ let Dados = {
                     ]
                   }]
             },
-            mineração: {
+            mineracao: {
                 nome: "Mineração",
                 id: 4,
                 gif: "https://i.gifer.com/GiaJ.gif",
@@ -1079,7 +1079,7 @@ let Dados = {
             }
         }
     },
-    química: {
+    quimica: {
         nome: "Química",
         id: 6,
         temas: {
@@ -1286,7 +1286,7 @@ let Dados = {
                     ]
                   }]
             },
-            ligaçõesintermoleculares: {
+            ligacoesintermoleculares: {
                 nome: "Ligações Intermoleculares",
                 id: 4,
                 gif: "https://i.pinimg.com/originals/b6/fb/9f/b6fb9f87a15aea2c968b3c28cd6efb2f.gif",
@@ -1366,7 +1366,7 @@ let Dados = {
             }
         }
     },
-    gramática: {
+    gramatica: {
         nome: "Gramática",
         id: 7,
         temas: {
@@ -1382,7 +1382,7 @@ let Dados = {
                     }, ]
                 }, ]
             },
-            pontuação: {
+            pontuacao: {
                 nome: "Pontuação",
                 id: 2,
                 gif: "https://media1.tenor.com/images/3857d7a491decccf27802e35a6f2e74f/tenor.gif?itemid=16237337",
