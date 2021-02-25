@@ -108,7 +108,7 @@ class SpacedRepetition extends React.Component {
                 return a.temaNome < b.temaNome ? a.materiaNome < b.materiaNome ? a.object.data < b.object.data ? -1 : 0 : 0 : 0
             })
             return (
-            arrayOrdenado.map((el) => {
+            arrayOrdenado.map((el, ind) => {
                 let materia = el.materia
                 let tema = el.tema
                 let topico = el.topico
@@ -118,7 +118,7 @@ class SpacedRepetition extends React.Component {
                 let dataFormatada = ((data.getDate() )) + "/" + ((data.getMonth() + 1)) + "/" + data.getFullYear();
                 
                     return(
-                        <div onClick={() => {this.forceUpdate()}}>
+                        <div key={ind} onClick={() => {this.forceUpdate()}}>
                             <div className="divData">
                                 {dataFormatada}
                                 <span className="right">{el.materiaNome} - {el.temaNome} - {topico}</span>
@@ -136,10 +136,10 @@ class SpacedRepetition extends React.Component {
             }))} 
             else {
                 return (
-                    <>
+                    <div>
                     <div className="error">Não há nada para revisar! Responda mais perguntas e volte aqui mais tarde!</div>
                     <img className="errorGif" alt="errorGif" src="https://media3.giphy.com/media/1VT3UNeWdijUSMpRL4/source.gif"></img>
-                    </>
+                    </div>
                 )
             }
         

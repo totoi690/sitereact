@@ -36,12 +36,12 @@ class RenderBlocks extends React.Component {
           } else {
             if (this.props.filtrar !== undefined && this.props.filtrar !== "todos") {
                 return (
-                    Object.entries(Dados[this.props.filtrar].temas).map((element2) => {
+                    Object.entries(Dados[this.props.filtrar].temas).map((element2, ind) => {
                         let materia = Dados[this.props.filtrar].nome
                         let nome = element2[1].nome
                         let gif = element2[1].gif
                         return (
-                            <div className= "blockOuterDiv">
+                            <div className= "blockOuterDiv" key={ind}>
                             <div className ="blockInnerDiv" onClick={() => this.setState({ redirect: "/perguntas", materiaP: this.props.filtrar, temaP: element2[0] })}>
                             <div className="block">
                                 <div className="blockGif">{ gif !== undefined ? <img className="blockGifImg" alt="gif" src={gif}></img> : <div className="rect">IMAGEM INDISPONÍVEL</div>}</div>
@@ -62,14 +62,14 @@ class RenderBlocks extends React.Component {
             return (
                 Object.entries(Dados).map((element1) => {
                     return (
-                        Object.entries(element1[1].temas).map((element2) => {
+                        Object.entries(element1[1].temas).map((element2, ind) => {
                             let materia = element1[1].nome
                             let nome = element2[1].nome
                             let gif = element2[1].gif
                             let loading = element2[1].loading
                             return (
     
-                                <div className ="blockInnerDiv" onClick={() => this.setState({ redirect: "/perguntas", materiaP: element1[0], temaP: element2[0] })}>
+                                <div className ="blockInnerDiv" key={ind} onClick={() => this.setState({ redirect: "/perguntas", materiaP: element1[0], temaP: element2[0] })}>
                                 {loading ? <><div className="loading">&#xd7;</div><div className="loadingmini">Em produção...</div></> : null}
                                 <div className="block">
                                     <div className="blockGif">{ gif !== undefined ? loading ? <img className="blockGifImg grayscale" alt="gif" src={gif}></img> : <img className="blockGifImg" alt="gif" src={gif}></img> : <div className="rect">IMAGEM INDISPONÍVEL</div>}</div>

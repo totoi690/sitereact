@@ -64,7 +64,7 @@ class RenderCards extends React.Component {
             return( 
                 this.props.tema.perguntas.map((element, index) => {
                 return(
-                    <>
+                    <div key={index}>
                     {element.topico !== undefined ? 
                     <div className="topico" onClick={() => { this.mudarstat(index) }}> {Translate(element.topico, "t")} </div> 
                     : null}
@@ -88,7 +88,7 @@ class RenderCards extends React.Component {
                     : null}
 
                     <hr></hr>
-                    </>
+                    </div>
                 )  
             }))
                 }  else return null

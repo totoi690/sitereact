@@ -33,9 +33,10 @@ class RenderTopico extends React.Component {
 
     render() {
         return (
-            this.props.element.perguntas.map((element1) => {
+            this.props.element.perguntas.map((element1,ind) => {
                 return(
                     <CardModel
+                        key={ind}
                         handler={this.onUpdateItem} 
                         tema={this.props.tema} 
                         index={this.props.tema.perguntas[this.props.index].perguntas.indexOf(element1)}

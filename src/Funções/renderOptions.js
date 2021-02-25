@@ -11,8 +11,8 @@ class RenderOptions extends React.Component {
 
         let organizado = newArray.sort((a, b) => a[1].nome.localeCompare(b[1].nome)) //ordem alfabetica
 
-        return(organizado.map((element) => {return(<>
-            <option value={element[0]}>{element[1].nome}</option></>)}))
+        return(organizado.map((element, ind) => {return(<>
+            <option key={ind} value={element[0]}>{element[1].nome}</option></>)}))
             }
 }
 

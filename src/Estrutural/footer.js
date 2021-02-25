@@ -13,7 +13,7 @@ render() {
     return(<>
     <footer onClick={() => {this.setState({ showMore: !this.state.showMore})}}>
         {this.state.showMore ? <div className="showMoreDiv">Você achou o easter egg! 🥚🐇 <br></br> Muito obrigado por acessar o site! <hr></hr></div> : null}
-        @HeitorTanoue {'\u2728'} 
+        @HeitorTanoue {'\u2728'} - v.1.0.0
         {queroverobotao ? botaodeapagartudo: null}
     </footer>
     </>)
