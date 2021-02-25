@@ -1,7 +1,7 @@
 import React from 'react'
 import RenderNestedQuestions from "../Funções/renderNestedQuestions"
 import 'katex/dist/katex.min.css';
-import { BlockMath, InlineMath } from 'react-katex';
+import { BlockMath } from 'react-katex';
 import { CSSTransition } from "react-transition-group"
 import Translate from "../Funções/translate"
 

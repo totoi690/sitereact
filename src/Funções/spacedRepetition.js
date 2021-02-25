@@ -28,7 +28,7 @@ class SpacedRepetition extends React.Component {
                 let pnt = el.pontos
                 if (pnt !== undefined && pnt !== 0) {
                     return pnt
-                }
+                } else return 0
             })
             let soma = ponto.reduce((a,b) => {return a + b})
             return ((soma + pontos) / (ponto.length + 1))
